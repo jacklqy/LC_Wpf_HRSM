@@ -1,0 +1,102 @@
+﻿<dx:ThemedWindow
+    x:Class="HRSM.DXHouseApp.BM.HouseTradeInfoWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol"
+    xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+    Title="房屋交易页面" Height="auto" Width="800"  Name="houseTradeWindow" ShowIcon="False" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Loaded="HouseTradeWindow_Loaded"
+    >
+        <dx:ThemedWindow.Resources>
+                <Style TargetType="{x:Type dx:SimpleButton}">
+                        <Setter Property="HorizontalAlignment" Value="Center"/>
+                        <Setter Property="VerticalAlignment" Value="Center"/>
+                        <Setter Property="Width" Value="66"/>
+                        <Setter Property="Height" Value="25"/>
+                </Style>
+        </dx:ThemedWindow.Resources>
+        <Grid>
+                <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <Border Grid.Row="1" HorizontalAlignment="Stretch" Background="White" CornerRadius="5" BorderBrush="CadetBlue" BorderThickness="2" Margin="10">
+                        <Grid  Margin="10" Background="White">
+                                <dxlc:LayoutControl HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Orientation="Vertical" ItemSpace="20" >
+                                        <dxlc:LayoutGroup ItemSpace="20">
+                                                <dxlc:LayoutItem Label="业主：">
+                                                        <dxe:TextEdit Name="txtOwnName" Text="{Binding HouseInfo.OwnerName}" IsEnabled="False"/>
+                                                </dxlc:LayoutItem>
+                                                <dxlc:LayoutItem Label="房屋名称：">
+                                                        <dxe:TextEdit Name="txtHouseName" Text="{Binding HouseInfo.HouseName}" IsEnabled="False"/>
+                                                </dxlc:LayoutItem>
+                                                <dxlc:LayoutItem Label="所属楼宇：">
+                                                        <dxe:TextEdit Name="txtBuilding" Text="{Binding HouseInfo.Building}" IsEnabled="False" />
+                                                </dxlc:LayoutItem>
+
+                                        </dxlc:LayoutGroup>
+                                        <dxlc:LayoutGroup ItemSpace="20">
+                                                <dxlc:LayoutItem Label="所在地址：">
+                                                        <dxe:TextEdit Name="txtAddress" Text="{Binding HouseInfo.HouseAddress}" IsEnabled="False"/>
+                                                </dxlc:LayoutItem>
+                                                <dxlc:LayoutItem Label="朝向：">
+                                                        <dxe:TextEdit Name="txtDirection" Text="{Binding HouseInfo.HouseDirection}" IsEnabled="False"/>
+                                                </dxlc:LayoutItem>
+                                                <dxlc:LayoutItem Label="户型：">
+                                                        <dxe:TextEdit Name="txtLayout" Text="{Binding HouseInfo.HouseLayout}" IsEnabled="False"/>
+                                                </dxlc:LayoutItem>
+                                        </dxlc:LayoutGroup>
+                                        <dxlc:LayoutGroup ItemSpace="20">
+                                                <dxlc:LayoutItem Label="面积：">
+                                                        <dxe:TextEdit Name="txtAreas" Text="{Binding HouseInfo.HouseArea}" IsEnabled="False"/>
+                                                </dxlc:LayoutItem>
+                                                <dxlc:LayoutItem Label="楼层：">
+                                                        <dxe:TextEdit Name="txtFloor" Text="{Binding HouseInfo.HouseFloor}" IsEnabled="False"/>
+                                                </dxlc:LayoutItem>
+                                                <dxlc:LayoutItem Label="价格：">
+                                                        <dx:UniformStackPanel >
+                                                                <dxe:TextEdit Name="txtPrice" Text="{Binding HouseInfo.HousePrice}" IsEnabled="False" Width="80" />
+                                                                <dxe:TextEdit Name="txtUnit" Text="{Binding HouseInfo.PriceUnit}" IsEnabled="False"/>
+                                                        </dx:UniformStackPanel>
+
+                                                </dxlc:LayoutItem>
+
+                                        </dxlc:LayoutGroup>
+                                        <dxlc:LayoutGroup></dxlc:LayoutGroup>
+                                        <dxlc:LayoutGroup ItemSpace="20">
+                                                <dxlc:LayoutItem Label="租售：">
+                                                        <dxe:ComboBoxEdit Name="cboRentSale" ItemsSource="{Binding CboRentSales}" DisplayMember="RSName" ValueMember="RSId" Text="{Binding RSName,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" IsEnabled="False"/>
+                                                </dxlc:LayoutItem>
+                                                <dxlc:LayoutItem Label="客户：">
+                                                        <dxe:ComboBoxEdit Name="cboCustomers" ItemsSource="{Binding CboCustomers}" DisplayMember="CustomerName" ValueMember="CustomerId" EditValue="{Binding CustId,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+                                                </dxlc:LayoutItem>
+                                                <dxlc:LayoutItem Label="交易总价：">
+                                                        <dxe:TextEdit Name="txtTradeAmount" Text="{Binding TradeAmount,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+                                                </dxlc:LayoutItem>
+
+                                        </dxlc:LayoutGroup>
+                                        <dxlc:LayoutGroup ItemSpace="20">
+                                                <dxlc:LayoutItem Label="办理人：">
+                                                        <dxe:TextEdit Name="txtDealUser" Text="{Binding DealUser,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+                                                </dxlc:LayoutItem>
+                                                <dxlc:LayoutItem Label="交易时间：">
+                                                        <dxe:DateEdit Name="txtTradeTime" EditValue="{Binding TradeTime,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" IsTextEditable="True" Mask="G" >
+                                                                <dxe:DateEdit.StyleSettings>
+                                                                        <dxe:DateEditPickerStyleSettings/>
+                                                                </dxe:DateEdit.StyleSettings>
+                                                        </dxe:DateEdit>
+                                                </dxlc:LayoutItem>
+                                                <dxlc:LayoutItem Label="交易方式：">
+                                                        <dxe:ComboBoxEdit Name="cboTradeWays" ItemsSource="{Binding CboTradeWays}" Text="{Binding TradeWay,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+                                                </dxlc:LayoutItem>
+                                        </dxlc:LayoutGroup>
+                                </dxlc:LayoutControl>
+                        </Grid>
+                </Border>
+                <dx:UniformStackPanel  Grid.Row="2"  HorizontalAlignment="Center">
+                        <dx:SimpleButton  Name="btnAdd" Content="{Binding ConfirmBtnContent}" Command="{Binding ConfirmCmd}"   Glyph="{dx:DXImage Image=Apply_16x16.png}"/>
+                        <dx:SimpleButton Name="btnClose" Content="关闭" Command="{Binding CloseWindowCmd}" CommandParameter="{Binding ElementName=houseTradeWindow}"  Margin="20,0" Glyph="{dx:DXImage Image=Close_16x16.png}"/>
+                </dx:UniformStackPanel>
+        </Grid>
+</dx:ThemedWindow>

@@ -1,0 +1,22 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevExpress.Xpf.Themes..ThemeEditor", "DevExpress.Xpf.Themes..ThemeEditor.csproj", "{3CDD336F-8345-4C7E-9657-CDEEBBB3D80E}"
+EndProject
+Global
+    GlobalSection(SolutionConfigurationPlatforms) = preSolution
+        Debug|Any CPU = Debug|Any CPU
+		DebugTest|Any CPU = DebugTest|Any CPU
+        Release|Any CPU = Release|Any CPU
+    EndGlobalSection
+    GlobalSection(ProjectConfigurationPlatforms) = postSolution
+        {3CDD336F-8345-4C7E-9657-CDEEBBB3D80E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {3CDD336F-8345-4C7E-9657-CDEEBBB3D80E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CDD336F-8345-4C7E-9657-CDEEBBB3D80E}.DebugTest|Any CPU.ActiveCfg = DebugTest|Any CPU
+		{3CDD336F-8345-4C7E-9657-CDEEBBB3D80E}.DebugTest|Any CPU.Build.0 = DebugTest|Any CPU
+        {3CDD336F-8345-4C7E-9657-CDEEBBB3D80E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {3CDD336F-8345-4C7E-9657-CDEEBBB3D80E}.Release|Any CPU.Build.0 = Release|Any CPU
+    EndGlobalSection
+    GlobalSection(SolutionProperties) = preSolution
+        HideSolutionNode = FALSE
+    EndGlobalSection
+EndGlobal

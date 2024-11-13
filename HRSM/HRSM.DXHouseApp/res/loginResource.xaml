@@ -1,0 +1,42 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:HRSM.DXHouseApp.res"
+                     xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+                    xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+                    >
+    <Style x:Key="loginWindowStyle" TargetType="{x:Type dx:ThemedWindow}">
+        <Setter Property="Height" Value="300"></Setter>
+        <Setter Property="Width" Value="500"></Setter>
+        <Setter Property="Icon" Value="../imgs/house.jpg"></Setter>
+        <Setter Property="WindowState" Value="Normal"></Setter>
+        <Setter Property="ResizeMode" Value="CanMinimize"></Setter>
+    </Style>
+    
+    <Style TargetType="dx:SimpleButton" x:Key="btnStyle">
+        <Setter Property="Height" Value="22"></Setter>
+        <Setter Property="Padding" Value="8,2,5,2"></Setter>
+        <Setter Property="FontFamily" Value="Elephant"></Setter>
+        <Setter Property="Margin" Value="0,0,56,0"></Setter>
+        <Setter Property="FontSize" Value="12"></Setter>
+    </Style>
+    <Style TargetType="dx:SimpleButton" x:Key="loginStyle" BasedOn="{StaticResource btnStyle}">
+        <Setter Property="Foreground" Value="Black" ></Setter>
+        <Setter Property="IsDefault"  Value="True" ></Setter>
+    </Style>
+
+    <Style TargetType="dx:SimpleButton" x:Key="closeStyle" BasedOn="{StaticResource btnStyle}">
+        <Setter Property="Foreground" Value="Red" ></Setter>
+        <Setter Property="IsCancel"  Value="True" ></Setter>
+    </Style>
+    
+    <Style x:Key="textEditStyle" TargetType="{x:Type dxe:TextEdit}" >
+        <Setter Property="Height" Value="20"></Setter>
+        <Setter Property="Width" Value="100"></Setter>
+        <Setter Property="Margin" Value="0"></Setter>
+    </Style>
+    <Style x:Key="passwordStyle" TargetType="{x:Type dxe:PasswordBoxEdit}" >
+        <Setter Property="Height" Value="20"></Setter>
+        <Setter Property="Width" Value="100"></Setter>
+        <Setter Property="Margin" Value="0"></Setter>
+    </Style>
+</ResourceDictionary>

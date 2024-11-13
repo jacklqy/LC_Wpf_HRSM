@@ -1,0 +1,73 @@
+D:\课程新内容\项目实战\房屋租售管理平台\HRSM\HRSM.BLL\bin\Release\HRSM.BLL.dll
+D:\课程新内容\项目实战\房屋租售管理平台\HRSM\HRSM.BLL\bin\Release\HRSM.BLL.pdb
+D:\课程新内容\项目实战\房屋租售管理平台\HRSM\HRSM.BLL\bin\Release\HRSM.DAL.dll
+D:\课程新内容\项目实战\房屋租售管理平台\HRSM\HRSM.BLL\bin\Release\HRSM.Models.dll
+D:\课程新内容\项目实战\房屋租售管理平台\HRSM\HRSM.BLL\bin\Release\DBUtility.dll
+D:\课程新内容\项目实战\房屋租售管理平台\HRSM\HRSM.BLL\bin\Release\HRSM.Common.dll
+D:\课程新内容\项目实战\房屋租售管理平台\HRSM\HRSM.BLL\bin\Release\NPOI.dll
+D:\课程新内容\项目实战\房屋租售管理平台\HRSM\HRSM.BLL\bin\Release\Newtonsoft.Json.dll
+D:\课程新内容\项目实战\房屋租售管理平台\HRSM\HRSM.BLL\bin\Release\NPOI.OOXML.dll
+D:\课程新内容\项目实战\房屋租售管理平台\HRSM\HRSM.BLL\bin\Release\NPinyinPro.dll
+D:\课程新内容\项目实战\房屋租售管理平台\HRSM\HRSM.BLL\bin\Release\ICSharpCode.SharpZipLib.dll
+D:\课程新内容\项目实战\房屋租售管理平台\HRSM\HRSM.BLL\bin\Release\NPOI.OpenXml4Net.dll
+D:\课程新内容\项目实战\房屋租售管理平台\HRSM\HRSM.BLL\bin\Release\NPOI.OpenXmlFormats.dll
+D:\课程新内容\项目实战\房屋租售管理平台\HRSM\HRSM.BLL\bin\Release\HRSM.DAL.pdb
+D:\课程新内容\项目实战\房屋租售管理平台\HRSM\HRSM.BLL\bin\Release\HRSM.Models.pdb
+D:\课程新内容\项目实战\房屋租售管理平台\HRSM\HRSM.BLL\bin\Release\DBUtility.pdb
+D:\课程新内容\项目实战\房屋租售管理平台\HRSM\HRSM.BLL\bin\Release\HRSM.Common.pdb
+D:\课程新内容\项目实战\房屋租售管理平台\HRSM\HRSM.BLL\bin\Release\Newtonsoft.Json.pdb
+D:\课程新内容\项目实战\房屋租售管理平台\HRSM\HRSM.BLL\bin\Release\Newtonsoft.Json.xml
+D:\课程新内容\项目实战\房屋租售管理平台\HRSM\HRSM.BLL\bin\Release\ICSharpCode.SharpZipLib.xml
+D:\课程新内容\项目实战\房屋租售管理平台\HRSM\HRSM.BLL\obj\Release\HRSM.BLL.csprojAssemblyReference.cache
+D:\课程新内容\项目实战\房屋租售管理平台\HRSM\HRSM.BLL\obj\Release\HRSM.BLL.csproj.CoreCompileInputs.cache
+D:\课程新内容\项目实战\房屋租售管理平台\HRSM\HRSM.BLL\obj\Release\HRSM.BLL.csproj.CopyComplete
+D:\课程新内容\项目实战\房屋租售管理平台\HRSM\HRSM.BLL\obj\Release\HRSM.BLL.dll
+D:\课程新内容\项目实战\房屋租售管理平台\HRSM\HRSM.BLL\obj\Release\HRSM.BLL.pdb
+D:\HRSM\HRSM.BLL\bin\Release\HRSM.BLL.dll
+D:\HRSM\HRSM.BLL\bin\Release\HRSM.BLL.pdb
+D:\HRSM\HRSM.BLL\bin\Release\HRSM.Common.dll
+D:\HRSM\HRSM.BLL\bin\Release\HRSM.DAL.dll
+D:\HRSM\HRSM.BLL\bin\Release\HRSM.Models.dll
+D:\HRSM\HRSM.BLL\bin\Release\NPOI.dll
+D:\HRSM\HRSM.BLL\bin\Release\Newtonsoft.Json.dll
+D:\HRSM\HRSM.BLL\bin\Release\NPOI.OOXML.dll
+D:\HRSM\HRSM.BLL\bin\Release\NPinyinPro.dll
+D:\HRSM\HRSM.BLL\bin\Release\DBUtility.dll
+D:\HRSM\HRSM.BLL\bin\Release\ICSharpCode.SharpZipLib.dll
+D:\HRSM\HRSM.BLL\bin\Release\NPOI.OpenXml4Net.dll
+D:\HRSM\HRSM.BLL\bin\Release\NPOI.OpenXmlFormats.dll
+D:\HRSM\HRSM.BLL\bin\Release\HRSM.Common.pdb
+D:\HRSM\HRSM.BLL\bin\Release\HRSM.DAL.pdb
+D:\HRSM\HRSM.BLL\bin\Release\HRSM.Models.pdb
+D:\HRSM\HRSM.BLL\bin\Release\Newtonsoft.Json.pdb
+D:\HRSM\HRSM.BLL\bin\Release\Newtonsoft.Json.xml
+D:\HRSM\HRSM.BLL\bin\Release\DBUtility.pdb
+D:\HRSM\HRSM.BLL\obj\Release\HRSM.BLL.csprojAssemblyReference.cache
+D:\HRSM\HRSM.BLL\obj\Release\HRSM.BLL.csproj.CoreCompileInputs.cache
+D:\HRSM\HRSM.BLL\obj\Release\HRSM.BLL.csproj.CopyComplete
+D:\HRSM\HRSM.BLL\obj\Release\HRSM.BLL.dll
+D:\HRSM\HRSM.BLL\obj\Release\HRSM.BLL.pdb
+D:\工作\BS+CS Vip第二期直播\20210507Course67WPF实战01\HRSM\HRSM.BLL\bin\Release\HRSM.BLL.dll
+D:\工作\BS+CS Vip第二期直播\20210507Course67WPF实战01\HRSM\HRSM.BLL\bin\Release\HRSM.BLL.pdb
+D:\工作\BS+CS Vip第二期直播\20210507Course67WPF实战01\HRSM\HRSM.BLL\bin\Release\HRSM.Common.dll
+D:\工作\BS+CS Vip第二期直播\20210507Course67WPF实战01\HRSM\HRSM.BLL\bin\Release\HRSM.DAL.dll
+D:\工作\BS+CS Vip第二期直播\20210507Course67WPF实战01\HRSM\HRSM.BLL\bin\Release\HRSM.Models.dll
+D:\工作\BS+CS Vip第二期直播\20210507Course67WPF实战01\HRSM\HRSM.BLL\bin\Release\NPOI.dll
+D:\工作\BS+CS Vip第二期直播\20210507Course67WPF实战01\HRSM\HRSM.BLL\bin\Release\Newtonsoft.Json.dll
+D:\工作\BS+CS Vip第二期直播\20210507Course67WPF实战01\HRSM\HRSM.BLL\bin\Release\NPOI.OOXML.dll
+D:\工作\BS+CS Vip第二期直播\20210507Course67WPF实战01\HRSM\HRSM.BLL\bin\Release\NPinyinPro.dll
+D:\工作\BS+CS Vip第二期直播\20210507Course67WPF实战01\HRSM\HRSM.BLL\bin\Release\DBUtility.dll
+D:\工作\BS+CS Vip第二期直播\20210507Course67WPF实战01\HRSM\HRSM.BLL\bin\Release\ICSharpCode.SharpZipLib.dll
+D:\工作\BS+CS Vip第二期直播\20210507Course67WPF实战01\HRSM\HRSM.BLL\bin\Release\NPOI.OpenXml4Net.dll
+D:\工作\BS+CS Vip第二期直播\20210507Course67WPF实战01\HRSM\HRSM.BLL\bin\Release\NPOI.OpenXmlFormats.dll
+D:\工作\BS+CS Vip第二期直播\20210507Course67WPF实战01\HRSM\HRSM.BLL\bin\Release\HRSM.Common.pdb
+D:\工作\BS+CS Vip第二期直播\20210507Course67WPF实战01\HRSM\HRSM.BLL\bin\Release\HRSM.DAL.pdb
+D:\工作\BS+CS Vip第二期直播\20210507Course67WPF实战01\HRSM\HRSM.BLL\bin\Release\HRSM.Models.pdb
+D:\工作\BS+CS Vip第二期直播\20210507Course67WPF实战01\HRSM\HRSM.BLL\bin\Release\Newtonsoft.Json.pdb
+D:\工作\BS+CS Vip第二期直播\20210507Course67WPF实战01\HRSM\HRSM.BLL\bin\Release\Newtonsoft.Json.xml
+D:\工作\BS+CS Vip第二期直播\20210507Course67WPF实战01\HRSM\HRSM.BLL\bin\Release\DBUtility.pdb
+D:\工作\BS+CS Vip第二期直播\20210507Course67WPF实战01\HRSM\HRSM.BLL\obj\Release\HRSM.BLL.csprojAssemblyReference.cache
+D:\工作\BS+CS Vip第二期直播\20210507Course67WPF实战01\HRSM\HRSM.BLL\obj\Release\HRSM.BLL.csproj.CoreCompileInputs.cache
+D:\工作\BS+CS Vip第二期直播\20210507Course67WPF实战01\HRSM\HRSM.BLL\obj\Release\HRSM.BLL.csproj.CopyComplete
+D:\工作\BS+CS Vip第二期直播\20210507Course67WPF实战01\HRSM\HRSM.BLL\obj\Release\HRSM.BLL.dll
+D:\工作\BS+CS Vip第二期直播\20210507Course67WPF实战01\HRSM\HRSM.BLL\obj\Release\HRSM.BLL.pdb

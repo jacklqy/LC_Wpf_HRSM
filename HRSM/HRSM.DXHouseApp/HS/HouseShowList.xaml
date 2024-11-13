@@ -1,0 +1,147 @@
+﻿<UserControl x:Class="HRSM.DXHouseApp.HS.HouseShowList"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+             xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+             xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol"
+             xmlns:model="clr-namespace:HRSM.Models.VModels;assembly=HRSM.Models"
+             xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+              xmlns:c="clr-namespace:HRSM.DXHouseApp.Utils"
+             xmlns:vm="clr-namespace:HRSM.DXHouseApp.ViewModels"
+             mc:Ignorable="d"
+             d:DesignHeight="600" d:DesignWidth="1000" Name="ucHouseShow" Loaded="UcHouseShow_Loaded" >
+    <UserControl.DataContext>
+        <vm:HouseListViewModel />
+    </UserControl.DataContext>
+    <UserControl.Resources>
+        <c:ObjectConvert x:Key="objConverter"/>
+        <DataTemplate x:Key="houseList" DataType="{x:Type model:ViewHouseInfoModel}" >
+            <Grid Margin="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="58*"/>
+                    <ColumnDefinition Width="133*"/>
+                </Grid.ColumnDefinitions>
+                <Border Style="{StaticResource cardItemBorder}" >
+                    <dxlc:LayoutControl Orientation="Vertical" Grid.ColumnSpan="2" >
+                        <dxlc:LayoutGroup Orientation="Horizontal" ItemSpace="10">
+                            <dxlc:LayoutItem Label="业主" LabelStyle="{StaticResource bluelblStyle}">
+                                <dxg:CardCellContentPresenter FieldName="OwnerName" Foreground="Brown" FontWeight="Bold" />
+                            </dxlc:LayoutItem>
+                            <dxlc:LayoutItem Label="朝向" LabelStyle="{StaticResource bluelblStyle}">
+                                <dxg:CardCellContentPresenter FieldName="HouseDirection" />
+                            </dxlc:LayoutItem>
+                        </dxlc:LayoutGroup>
+
+                        <dxlc:LayoutItem Label="图片" LabelStyle="{StaticResource bluelblStyle}">
+                            <dxe:ImageEdit Source="{Binding Path=Row.HousePic}" Width="80"  Height="50" HorizontalAlignment="Left" ShowMenu="False"  />
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutGroup Orientation="Horizontal" ItemSpace="10">
+                            <dxlc:LayoutItem Label="户型" LabelStyle="{StaticResource bluelblStyle}">
+                                <dxg:CardCellContentPresenter  FieldName="HouseLayout" />
+                            </dxlc:LayoutItem>
+                            <dxlc:LayoutItem Label="状态" LabelStyle="{StaticResource bluelblStyle}">
+                                <dxg:CardCellContentPresenter x:Name="cchousestate" FieldName="HouseState"  FontWeight="Bold" />
+                            </dxlc:LayoutItem>
+                        </dxlc:LayoutGroup>
+                        <dxlc:LayoutItem HorizontalAlignment="Right">
+                            <dxe:HyperlinkEdit x:Name="linkInfo" Text="详情>>"  Tag="{Binding Path=Row.HouseId}"  Height="20"  HorizontalAlignment="Center" ShowNavigationUrlToolTip="False" >
+                                <i:Interaction.Triggers>
+                                    <i:EventTrigger EventName="PreviewMouseLeftButtonDown">
+                                        <i:InvokeCommandAction Command="{Binding DataContext.CheckHouseInfo,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type UserControl}}}">
+                                            <i:InvokeCommandAction.CommandParameter>
+                                                <MultiBinding Converter="{StaticResource objConverter }">
+                                                    <Binding ElementName="ucHouseShow"/>
+                                                    <Binding Path="Row.HouseId"/>
+                                                </MultiBinding>
+                                            </i:InvokeCommandAction.CommandParameter>
+                                        </i:InvokeCommandAction>
+                                    </i:EventTrigger>
+                                </i:Interaction.Triggers>
+                            </dxe:HyperlinkEdit>
+                        </dxlc:LayoutItem>
+                    </dxlc:LayoutControl>
+                </Border>
+            </Grid>
+            <DataTemplate.Triggers>
+                <DataTrigger Binding="{Binding Path=Row.HouseState}" Value="已出租">
+                    <Setter Property="Foreground" TargetName="cchousestate" Value="Green"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Path=Row.HouseState}" Value="已出售">
+                    <Setter Property="Foreground" TargetName="cchousestate" Value="#FF371FCD"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Path=Row.HouseState}" Value="未出售">
+                    <Setter Property="Foreground" TargetName="cchousestate" Value="#FFEA2978"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Path=Row.HouseState}" Value="未出租">
+                    <Setter Property="Foreground" TargetName="cchousestate" Value="#FFE06A17"/>
+                </DataTrigger>
+            </DataTemplate.Triggers>
+        </DataTemplate>
+
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <dxlc:LayoutControl Grid.Row="0" HorizontalAlignment="Stretch"   VerticalAlignment="Center"  >
+            <dxlc:LayoutGroup ItemSpace="20" ItemStyle="{StaticResource layItemStyle}">
+                <dxlc:LayoutItem Label="房屋名称："  >
+                    <dxe:TextEdit Name="txtHouseName" Text="{Binding HouseName,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="EditValueChanged">
+                                <i:InvokeCommandAction Command="{Binding LoadAllHouses}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </dxe:TextEdit>
+                </dxlc:LayoutItem>
+                <dxlc:LayoutItem Label="租售类型：" >
+                    <dxe:ComboBoxEdit Name="cboRentSale" ItemsSource="{Binding RSList}" Text="{Binding RentSale,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="SelectedIndexChanged">
+                                <i:InvokeCommandAction Command="{Binding LoadAllHouses}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </dxe:ComboBoxEdit>
+                </dxlc:LayoutItem>
+                <dxlc:LayoutItem Label="朝向：" >
+                    <dxe:ComboBoxEdit Name="cboHouseDirection" ItemsSource="{Binding DirectionList}" Text="{Binding HouseDirection,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="SelectedIndexChanged">
+                                <i:InvokeCommandAction Command="{Binding LoadAllHouses}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </dxe:ComboBoxEdit>
+                </dxlc:LayoutItem>
+                <dxlc:LayoutItem Label="户型：" >
+                    <dxe:TextEdit Name="txtHouseLayout" Text="{Binding HouseLayout,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="EditValueChanged">
+                                <i:InvokeCommandAction Command="{Binding LoadAllHouses}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </dxe:TextEdit>
+                </dxlc:LayoutItem>
+            </dxlc:LayoutGroup>
+
+        </dxlc:LayoutControl>
+        <dxg:GridControl Name="gridHouses"  Grid.Row="1"  EnableSmartColumnsGeneration="False" HorizontalAlignment="Stretch"   AutoGenerateColumns="KeepOld"  SelectionMode="Row" VerticalAlignment="Stretch" ItemsSource="{Binding HouseList}" Opacity="0.985" ShowBorder="False"  >
+            <dxg:GridControl.View>
+                <dxg:CardView ShowTotalSummary="False"  AllowEditing="False"  ShowGroupPanel="False" CardLayout="Rows" ShowColumnHeaders="False" ShowCardExpandButton="True"  CardAlignment="Near" MaxCardCountInRow="5"
+                  AllowPaging="True" PageSize="15" PagerNumericButtonCount="5"  CardTemplate="{StaticResource houseList}" CardHeaderBinding="{Binding HouseName}"    >
+                </dxg:CardView>
+            </dxg:GridControl.View>
+            <dxg:GridColumn FieldName="OwnerName" Header="业主"/>
+            <dxg:GridColumn FieldName="HousePic" Header="图片" AllowColumnFiltering="False" >
+            </dxg:GridColumn>
+            <dxg:GridColumn FieldName="HouseDirection" Header="朝向"/>
+            <dxg:GridColumn FieldName="HouseLayout" Header="户型"/>
+            <dxg:GridColumn FieldName="HouseState" Header="状态"/>
+            <dxg:GridColumn Name="colInfo" FieldName="HouseId" Header="详情"/>
+        </dxg:GridControl>
+
+    </Grid>
+</UserControl>

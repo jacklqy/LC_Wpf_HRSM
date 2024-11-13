@@ -1,0 +1,140 @@
+﻿<UserControl x:Class="HRSM.DXHouseApp.BM.HouseInfoView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+             xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol"
+             xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             mc:Ignorable="d"
+             d:DesignHeight="650" d:DesignWidth="800" Name="ucHouseInfo" Loaded="UcHouseInfo_Loaded">
+        <UserControl.Resources>
+                <Style TargetType="{x:Type dx:SimpleButton}">
+                        <Setter Property="HorizontalAlignment" Value="Center"/>
+                        <Setter Property="VerticalAlignment" Value="Center"/>
+                        <Setter Property="Width" Value="66"/>
+                        <Setter Property="Height" Value="25"/>
+                </Style>
+                <Style TargetType="dxe:TextEdit" >
+                        <Setter Property="Width" Value="150"></Setter>
+                        <Setter Property="Foreground" Value="#FF2E46E2"></Setter>
+                </Style>
+                <Style TargetType="dxe:ComboBoxEdit" >
+                        <Setter Property="IsReadOnly" Value="False"></Setter>
+                        <Setter Property="Width" Value="150"></Setter>
+                        <Setter Property="Foreground" Value="#FF2E46E2"></Setter>
+                </Style>
+                <Style TargetType="dxlc:LayoutItemLabel" x:Key="labelItemStyle" >
+                        <Setter Property="HorizontalAlignment" Value="Right"></Setter>
+                        <Setter Property="Width" Value="60"></Setter>
+                </Style>
+                <Style TargetType="dxlc:LayoutItem" >
+                        <Setter Property="HorizontalAlignment" Value="Left"></Setter>
+                        <Setter Property="LabelStyle" Value="{StaticResource labelItemStyle}"/>
+
+                </Style>
+                <Style TargetType="dxlc:LayoutGroup" >
+                        <Setter Property="ItemSpace" Value="10"></Setter>
+                        <Setter Property="HorizontalAlignment" Value="Left"></Setter>
+                </Style>
+        </UserControl.Resources>
+        <Grid >
+                <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <Label Content=">房屋信息页面" Grid.Row="0" Margin="10,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="18"/>
+                <Border  Grid.Row="1" Margin="10" Background="White" BorderBrush="CadetBlue" BorderThickness="1" CornerRadius="5">
+                        <Grid>
+                                <dxlc:LayoutControl HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Orientation="Vertical" ItemSpace="10" Margin="0,10,0,10" >
+                                        <dxlc:LayoutGroup ItemSpace="20">
+                                                <dxlc:LayoutItem Label="房屋名称：">
+                                                        <dxe:TextEdit Name="txtHouseName" Text="{Binding HouseInfo.HouseName}"/>
+                                                </dxlc:LayoutItem>
+                                                <dxlc:LayoutItem Label="所在楼宇：">
+                                                        <dxe:TextEdit Name="txtBuilding" Text="{Binding  HouseInfo.Building}" />
+                                                </dxlc:LayoutItem>
+                                                <dxlc:LayoutItem Label="房屋地址：">
+                                                        <dxe:TextEdit Name="txtAddress" Text="{Binding  HouseInfo.HouseAddress}"/>
+                                                </dxlc:LayoutItem>
+                                        </dxlc:LayoutGroup>
+                                        <dxlc:LayoutGroup ItemSpace="20">
+                                                <dxlc:LayoutItem Label="租售类型：" VerticalContentAlignment="Center" Width="212">
+                                                        <dx:UniformStackPanel Orientation="Horizontal" VerticalAlignment="Center" >
+                                                                <RadioButton Name="rbtnRent" Content="出租" IsChecked="{Binding IsRent,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Command="{Binding CheckRentSaleCmd}" ></RadioButton>
+                                                                <RadioButton Name="rbtnSale" Content="出售" IsChecked="{Binding IsSale,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Command="{Binding CheckRentSaleCmd}"></RadioButton>
+                                                        </dx:UniformStackPanel>
+                                                </dxlc:LayoutItem>
+                                                <dxlc:LayoutItem Label="价格：">
+                                                        <dxe:SpinEdit Name="txtPrice" MaskType="Numeric" Mask="n2" Increment="1" EditValue="{Binding  HouseInfo.HousePrice}" Width="150"/>
+                                                </dxlc:LayoutItem>
+                                                <dxlc:LayoutItem Label="单位：">
+                                                        <dxe:ComboBoxEdit Name="cboUnits" ItemsSource="{Binding CboUnits}" DisplayMember="PUnitName" ValueMember="PUnitId" Text="{Binding  PriceUnit}">
+                                                        </dxe:ComboBoxEdit>
+                                                </dxlc:LayoutItem>
+                                        </dxlc:LayoutGroup>
+                                        <dxlc:LayoutGroup ItemSpace="20">
+                                                <dxlc:LayoutItem Label="朝向：">
+                                                        <dxe:ComboBoxEdit Name="cboDirections" ItemsSource="{Binding CboDirections}"  Text="{Binding  HouseDirection}">
+                                                        </dxe:ComboBoxEdit>
+                                                </dxlc:LayoutItem>
+                                                <dxlc:LayoutItem Label="户型：">
+                                                        <dxe:ComboBoxEdit Name="cboLayouts"  ItemsSource="{Binding CboLayouts}" DisplayMember="HLName" Text="{Binding  HouseLayout}">
+                                                        </dxe:ComboBoxEdit>
+                                                </dxlc:LayoutItem>
+                                                <dxlc:LayoutItem Label="业主：">
+                                                        <dxe:ComboBoxEdit Name="cboOwners" ItemsSource="{Binding CboOwners}" DisplayMember="OwnerName" ValueMember="OwnerId" EditValue="{Binding  OwnerId}">
+                                                        </dxe:ComboBoxEdit>
+                                                </dxlc:LayoutItem>
+                                        </dxlc:LayoutGroup>
+                                        <dxlc:LayoutGroup ItemSpace="20">
+                                                <dxlc:LayoutItem Label="楼层：">
+                                                        <dxe:TextEdit Name="txtFloor" Text="{Binding  HouseInfo.HouseFloor}" />
+                                                </dxlc:LayoutItem>
+                                                <dxlc:LayoutItem Label="面积：">
+                                                        <dxe:TextEdit Name="txtAreas" MaskType="Numeric" Mask="n2" Text="{Binding  HouseInfo.HouseArea}" />
+                                                </dxlc:LayoutItem>
+                                                <dxlc:LayoutItem Label="状态：">
+                                                        <dxe:ComboBoxEdit Name="cboStates" ItemsSource="{Binding CboStates,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" DisplayMember="StateName" ValueMember="StateId" Text="{Binding  HouseState}">
+                                                        </dxe:ComboBoxEdit>
+                                                </dxlc:LayoutItem>
+                                        </dxlc:LayoutGroup>
+                                        <dxlc:LayoutGroup Visibility="Visible" ItemSpace="20">
+                                                <dxlc:LayoutItem Label="发布时间：">
+                                                        <dxe:TextEdit Name="tbPubTime"  Text="{Binding  HouseInfo.PublishTime}" IsEnabled="False"/>
+                                                </dxlc:LayoutItem>
+                                                <dxlc:LayoutItem Label="添加时间：" >
+                                                        <dxe:TextEdit Name="tbCreateTime" Text="{Binding  HouseInfo.CreateTime}" IsEnabled="False"/>
+                                                </dxlc:LayoutItem>
+                                                <dxlc:LayoutItem Label="发布：">
+                                                        <dx:UniformStackPanel>
+                                                                <RadioButton Name="rbtnPublish" Content="是" IsChecked="{Binding  HouseInfo.IsPublish,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></RadioButton>
+                                                                <RadioButton Name="rbtnUnPublish" Content="否"  IsChecked="{Binding UnPublish,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></RadioButton>
+                                                        </dx:UniformStackPanel>
+                                                </dxlc:LayoutItem>
+                                        </dxlc:LayoutGroup>
+                                        <dxlc:LayoutGroup ItemSpace="20" HorizontalAlignment="Left">
+                                                <dxlc:LayoutItem Label="房屋图片：" HorizontalContentAlignment="Left">
+                                                        <dxe:ImageEdit Name="imgPic" Width="200"  Height="100" ShowMenu="False" ShowLoadDialogOnClickMode="Never" Source="{Binding  HousePic,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"  >
+                                                                <i:Interaction.Triggers>
+                                                                        <i:EventTrigger EventName="MouseLeftButtonDown">
+                                                                                <i:InvokeCommandAction Command="{Binding ChoosePicCmd}"/>
+                                                                        </i:EventTrigger>
+                                                                </i:Interaction.Triggers>
+                                                        </dxe:ImageEdit>
+                                                </dxlc:LayoutItem>
+                                                <dxlc:LayoutItem Label="房屋描述：" HorizontalContentAlignment="Left">
+                                                        <dxe:TextEdit  Name="txtRemark"  Text="{Binding  HouseInfo.Remark}" Width="400" TextWrapping="Wrap"  VerticalContentAlignment="Top" Height="100"/>
+                                                </dxlc:LayoutItem>
+                                        </dxlc:LayoutGroup>
+                                </dxlc:LayoutControl>
+                        </Grid>
+                </Border>
+                <dx:UniformStackPanel  Grid.Row="2"  HorizontalAlignment="Center">
+                        <dx:SimpleButton Name="btnAdd" Content="{Binding ConfirmBtnContent}" IsEnabled="{Binding IsConfirmBtnEnabled}" Visibility="{Binding IsConfirmBtnVisible}" Command="{Binding ConfirmCmd}" CommandParameter="{Binding ElementName=ucHouseInfo}"   Glyph="{dx:DXImage Image=Apply_16x16.png}"/>
+                        <dx:SimpleButton Name="btnClose" Content="关闭" Command="{Binding CloseTabPage}" CommandParameter="{Binding ElementName=ucHouseInfo}"  Margin="20,0" Glyph="{dx:DXImage Image=Cancel_16x16.png}"/>
+                </dx:UniformStackPanel>
+        </Grid>
+</UserControl>

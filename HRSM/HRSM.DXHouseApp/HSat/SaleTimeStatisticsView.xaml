@@ -1,0 +1,95 @@
+﻿<UserControl xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"  xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol"  x:Class="HRSM.DXHouseApp.HSat.SaleTimeStatisticsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+             xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts"
+             xmlns:vm="clr-namespace:HRSM.DXHouseApp.ViewModels.HSat"
+             xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+             mc:Ignorable="d"
+             d:DesignHeight="400" d:DesignWidth="1000" Loaded="UserControl_Loaded">
+    <UserControl.Resources>
+      
+    </UserControl.Resources>
+        <UserControl.DataContext>
+                <vm:SaleTimeStatisticsViewViewModel/>
+        </UserControl.DataContext>
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+        </Grid.RowDefinitions>
+        <dxlc:LayoutControl Grid.Row="0" Grid.Column="0"  >
+            <dxlc:LayoutGroup ItemSpace="20" HorizontalAlignment="Left">
+                <dxlc:LayoutItem Label="销售员：" >
+                    <dxe:TextEdit Name="txtSaleUser" Width="100" Text="{Binding SaleUser,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+                </dxlc:LayoutItem>
+               
+                <dxlc:LayoutItem Label="开始时间：">
+                                        <dxe:DateEdit Name="dtSTime" Width="120"   EditValue="{Binding StTime,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" ></dxe:DateEdit>
+                </dxlc:LayoutItem>
+                <dxlc:LayoutItem Label="结束时间：">
+                                        <dxe:DateEdit Name="dtETime" Width="120" EditValue="{Binding EtTime,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" DisplayFormatString="yyyy-MM-dd"></dxe:DateEdit>
+                </dxlc:LayoutItem>
+                <dxlc:LayoutItem >
+                    <dx:SimpleButton Name="btnFind" Content="统计" Command="{Binding FindSaleListCmd}"/>
+                </dxlc:LayoutItem>
+                <dxlc:LayoutItem >
+                    <dx:SimpleButton Name="btnOut" Content="导出"  Command="{Binding ExportDataCmd}" CommandParameter="{Binding ElementName=gridTotalData,Path=Columns}"/>
+                </dxlc:LayoutItem>
+            </dxlc:LayoutGroup>
+        </dxlc:LayoutControl>
+        <dxg:GridControl x:Name="gridTotalData" Grid.Column="0" Grid.Row="1" Grid.RowSpan="2"  EnableSmartColumnsGeneration="False" HorizontalAlignment="Stretch"   AutoGenerateColumns="KeepOld"  SelectionMode="Row" VerticalAlignment="Stretch" ItemsSource="{Binding SaleList}"   TotalSummarySource="{Binding TotalSummaries}">
+            <dxg:GridControl.Bands>
+                <dxg:GridControlBand Header="销售员信息" HorizontalHeaderContentAlignment="Center">
+                    <dxg:GridColumn FieldName="UserFName" Header="业务员"  />
+                    <dxg:GridColumn FieldName="DealUser" Header="账号"  />
+                </dxg:GridControlBand>
+                <dxg:GridControlBand Header="租售" HorizontalHeaderContentAlignment="Center">
+                    <dxg:GridColumn FieldName="RentCount" Header="出租数"  />
+                    <dxg:GridColumn FieldName="SaleCount" Header="出售数" />
+                </dxg:GridControlBand>
+                <dxg:GridControlBand Header="总计" HorizontalHeaderContentAlignment="Center">
+                    <dxg:GridColumn FieldName="TotalCount" Header="总数" />
+                </dxg:GridControlBand>
+            </dxg:GridControl.Bands>
+            <dxg:GridControl.View>
+                <dxg:TableView AllowPerPixelScrolling="True" ShowTotalSummary="True"  AllowEditing="False"  ShowGroupPanel="False" 
+                   AutoWidth="True"  />
+            </dxg:GridControl.View>
+        </dxg:GridControl>
+        <dxc:ChartControl x:Name="chart" Grid.Column="1" Grid.Row="0" Grid.RowSpan="2"
+            >
+            <dxc:ChartControl.Titles>
+                <dxc:Title x:Name="title" Content="销售统计" Dock="Top" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            </dxc:ChartControl.Titles>
+            <!--<dxc:SimpleDiagram2D x:Name="diagram2D">
+            </dxc:SimpleDiagram2D>-->
+            <dxc:SimpleDiagram3D x:Name="diagram3D">
+                <dxc:PieSeries3D Name="series"
+                                         ArgumentScaleType="Qualitative"
+                                         LabelsVisibility="True" DataSource="{Binding SaleList}"  ArgumentDataMember="DealUser" ValueDataMember="TotalCount">
+                    <dxc:PieSeries3D.Label>
+                        <dxc:SeriesLabel Indent="20"
+                                                 RenderMode="CustomShape"
+                                                 TextPattern="{}{A}, {VP:P0}"
+                                                 dxc:PieSeries.LabelPosition="Inside" />
+                    </dxc:PieSeries3D.Label>
+                    <!--#endregion-->
+                </dxc:PieSeries3D>
+            </dxc:SimpleDiagram3D>
+           
+            <dxc:ChartControl.Legend>
+                <dxc:Legend HorizontalPosition="Right" VerticalAlignment="Top" Padding="2"/>
+            </dxc:ChartControl.Legend>
+        </dxc:ChartControl>
+    
+    </Grid>
+</UserControl>

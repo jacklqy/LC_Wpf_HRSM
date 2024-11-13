@@ -1,0 +1,112 @@
+﻿<UserControl x:Class="HRSM.DXHouseApp.HS.HouseInfo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol"
+             xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+             xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+             mc:Ignorable="d"
+            d:DesignWidth="1000" Name="ucHouseInfo" Loaded="UcHouseInfo_Loaded">
+    <UserControl.Resources>
+        <Style TargetType="dxe:TextEdit" >
+            <Setter Property="IsReadOnly" Value="True"></Setter>
+            <Setter Property="Width" Value="200"></Setter>
+            <Setter Property="Foreground" Value="#FF2E46E2"></Setter>
+        </Style>
+        <Style TargetType="dxlc:LayoutItemLabel" x:Key="labelItemStyle" >
+            <Setter Property="HorizontalAlignment" Value="Right"></Setter>
+            <Setter Property="Width" Value="60"></Setter>
+        </Style>
+        <Style TargetType="dxlc:LayoutItem" >
+            <Setter Property="HorizontalAlignment" Value="Left"></Setter>
+            <Setter Property="LabelStyle" Value="{StaticResource labelItemStyle}"/>
+            
+        </Style>
+        <Style TargetType="dxlc:LayoutGroup" >
+            <Setter Property="ItemSpace" Value="10"></Setter>
+            <Setter Property="HorizontalAlignment" Value="Left"></Setter>
+        </Style>
+    </UserControl.Resources>
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Label Content="房屋信息详情" Grid.Row="0" Margin="50,5" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="18" FontWeight="Bold" Foreground="#FFCB6D1F"/>
+        <Border  Grid.Row="1" Margin="10" Background="White" BorderBrush="CadetBlue" BorderThickness="1" CornerRadius="5" >
+            <Grid>
+                <dxlc:LayoutControl HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Orientation="Vertical" ItemSpace="10" Margin="10" DataContext="{Binding HouseInfoModel}" >
+                    <dxlc:LayoutGroup >
+                        <dxlc:LayoutItem Label="业主：">
+                            <dxe:TextEdit Name="txtOwner" Text="{Binding OwnerName}">
+                            </dxe:TextEdit>
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="房屋名称：">
+                            <dxe:TextEdit Name="txtHouseName" Text="{Binding HouseName}"/>
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="所在楼宇：">
+                            <dxe:TextEdit Name="txtBuilding" Text="{Binding Building}" />
+                        </dxlc:LayoutItem>
+
+                    </dxlc:LayoutGroup>
+                    <dxlc:LayoutGroup >
+                        <dxlc:LayoutItem Label="房屋地址：">
+                            <dxe:TextEdit Name="txtAddress" Width="472" Text="{Binding HouseAddress}"/>
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="电话：">
+                            <dxe:TextEdit Name="txtOwnerPhone" Text="{Binding OwnerPhone}">
+                            </dxe:TextEdit>
+                        </dxlc:LayoutItem>
+
+                    </dxlc:LayoutGroup>
+                    <dxlc:LayoutGroup>
+                        <dxlc:LayoutItem Label="租售类型：" >
+                            <dxe:TextEdit Name="txtRentSale" Text="{Binding RentSale}"/>
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="价格：">
+                            <dxe:TextEdit Name="txtPrice" Text="{Binding HousePrice}"/>
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="单位：">
+                            <dxe:TextEdit Name="txtUnit" Text="{Binding PriceUnit}">
+                            </dxe:TextEdit>
+                        </dxlc:LayoutItem>
+
+                    </dxlc:LayoutGroup>
+                    <dxlc:LayoutGroup>
+                        <dxlc:LayoutItem Label="朝向：">
+                            <dxe:TextEdit Name="txtDirection" Text="{Binding HouseDirection}">
+                            </dxe:TextEdit>
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="户型：">
+                            <dxe:TextEdit Name="txtLayout" Text="{Binding HouseLayout}">
+                            </dxe:TextEdit>
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="楼层：">
+                            <dxe:TextEdit Name="txtFloor" Text="{Binding HouseFloor}" />
+                        </dxlc:LayoutItem>
+                    </dxlc:LayoutGroup>
+                    <dxlc:LayoutGroup >
+                        <dxlc:LayoutItem Label="面积：">
+                            <dxe:TextEdit Name="txtAreas" MaskType="Numeric" Mask="n2" Text="{Binding HouseArea}" />
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="状态：">
+                            <dxe:TextEdit Name="txtState" Text="{Binding HouseState}">
+                            </dxe:TextEdit>
+                        </dxlc:LayoutItem>
+                    </dxlc:LayoutGroup>
+                    <dxlc:LayoutGroup>
+                        <dxlc:LayoutItem Label="房屋图片：" HorizontalContentAlignment="Left">
+                            <dxe:ImageEdit Name="imgPic" Width="150"  Height="100" ShowMenu="False" Source="{Binding HousePic}"  />
+                        </dxlc:LayoutItem>
+                        <dxlc:LayoutItem Label="房屋描述：" HorizontalContentAlignment="Left">
+                            <dxe:TextEdit  Name="txtRemark" Width="400" Text="{Binding Remark}" TextWrapping="Wrap"  VerticalContentAlignment="Top" Height="100"/>
+                        </dxlc:LayoutItem>
+                    </dxlc:LayoutGroup>
+
+                </dxlc:LayoutControl>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

@@ -1,0 +1,75 @@
+﻿<dx:ThemedWindow
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+        xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+        xmlns:dxn="http://schemas.devexpress.com/winfx/2008/xaml/navbar"
+        x:Class="HRSM.DXHouseApp.HouseMain"
+        xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+        xmlns:vm="clr-namespace:HRSM.DXHouseApp.ViewModels"
+        xmlns:c="clr-namespace:HRSM.DXHouseApp.Utils"
+        Title="欢迎来到房屋租售管理平台"  WindowStyle="SingleBorderWindow" Loaded="ThemedWindow_Loaded"  WindowStartupLocation="CenterScreen" Style="{StaticResource mainWindowStyle}" x:Name="mainWin" WindowState="{Binding MainState}" >
+    <Window.Resources>
+        <c:ObjectConvert x:Key="objectConverter"/>
+    </Window.Resources>
+    <dx:DXDockPanel>
+        <Grid DockPanel.Dock="Top" Height="80">
+            <Image Source="imgs/logo.jpg" Stretch="Fill" Panel.ZIndex="1"></Image>
+            <dx:UniformStackPanel Panel.ZIndex="3" HorizontalAlignment="Right" Margin="0,0,20,10" VerticalAlignment="Bottom">
+                <dx:SimpleButton Name="btnLogin" Glyph="{dx:DXImage Image=User_16x16.png}"  Visibility="{Binding ShowLoginBtn}" Style="{StaticResource mainBtnStyle}" Command="{Binding ShowLoginPage}" CommandParameter="{Binding ElementName=mainWin}">登录</dx:SimpleButton>
+                <dx:SimpleButton Name="btnExit"  Glyph="{dx:DXImage Image=Cancel_16x16.png}" Foreground="Red" Style="{StaticResource mainBtnStyle}" Command="{Binding ExitCommand}" CommandParameter="{Binding ElementName=mainWin}" >退出</dx:SimpleButton>
+            </dx:UniformStackPanel>
+        </Grid>
+        <Border  DockPanel.Dock="Bottom" BorderThickness="1"  BorderBrush="CadetBlue">
+            <dxb:BarContainerControl >
+                <dxb:StatusBarControl >
+                    <dxb:BarStaticItem Name="sUser" Content="{Binding LoginUser}"   >
+                    </dxb:BarStaticItem>
+                    <dxb:BarStaticItem Name="sRole" Content="{Binding UserRole}"/>
+                    <dxb:BarStaticItem Name="sLTime" Content="{Binding LoginTime}" />
+                    <dxb:BarStaticItem Name="sRight" Content="{Binding RightInfo}" Alignment="Far" ShowBorder="False"/>
+                </dxb:StatusBarControl>
+            </dxb:BarContainerControl>
+        </Border>
+
+
+        <dxn:NavBarControl Name="navBarMenus" ItemsSource="{Binding MenuList}"  HorizontalAlignment="Left"  VerticalAlignment="Top" DockPanel.Dock="Left" Width="120"  >
+            <dxn:NavBarControl.Resources>
+                <Style TargetType="dxn:NavBarGroup">
+                    <Setter Property="Header" Value="{Binding GroupName}"/>
+                    <Setter Property="IsExpanded" Value="{Binding IsGroupExpand,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+                    <Setter Property="Command" Value="{Binding Path=DataContext.ExpandGroup,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type dx:ThemedWindow}}}"/>
+                    <Setter Property="CommandParameter" Value="{Binding RelativeSource={RelativeSource Mode=Self},Path=DataContext}"/>
+                    <Setter Property="ItemsSource" Value="{Binding MenuItemList}"/>
+                </Style>
+                <Style TargetType="dxn:NavBarItem">
+                    <Setter Property="Content" Value="{Binding Path=MenuName}"/>
+                    <Setter Property="ImageSource" Value="{dx:DXImage Image=Task_16x16.png}"/>
+                    <Setter Property="DisplayMode" Value="ImageAndText"/>
+                    <Setter Property="Command" Value="{Binding Path=DataContext.OpenNavItem,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type dx:ThemedWindow}}}"/>
+                    <Setter Property="CommandParameter" Value="{Binding RelativeSource={RelativeSource Mode=Self},Path=DataContext}">
+                    </Setter>
+                </Style>
+
+            </dxn:NavBarControl.Resources>
+            <dxn:NavBarControl.View>
+                <dxn:ExplorerBarView/>
+            </dxn:NavBarControl.View>
+        </dxn:NavBarControl>
+        <Grid>
+            <dx:DXImage Name="imgClose" Visibility="{Binding ShowCloseImg}" Source="{dx:DXImage Image=Close_16x16.png}" Width="20" Height="20" HorizontalAlignment="Right" VerticalAlignment="Top" Panel.ZIndex="3" Margin="0,5,5,0"  >
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="MouseLeftButtonDown">
+                        <i:InvokeCommandAction Command="{Binding CloseCmd}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </dx:DXImage>
+            <dx:DXTabControl Name="mainPages" ItemsSource="{Binding PageList}" Panel.ZIndex="1" Margin="0,5" Visibility="{Binding ShowTab}" SelectedItem="{Binding SelectedTab}" >
+
+            </dx:DXTabControl>
+        </Grid>
+
+
+    </dx:DXDockPanel>
+
+</dx:ThemedWindow>

@@ -1,0 +1,504 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{22BE8B4E-1AA6-4CC4-8790-9DD81DDD0113}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HRSM.DXHouseApp</RootNamespace>
+    <AssemblyName>HRSM.DXHouseApp</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Diagram.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Images.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Charts.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.CodeView.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Controls.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Core.v18.1" />
+    <Reference Include="DevExpress.Xpf.Diagram.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Docking.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Grid.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Grid.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Layout.v18.1.Core, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.LayoutControl.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.NavBar.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.RichEdit.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Themes.DXStyle.v18.1, Version=18.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Expression.Interactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Windows.Interactivity.WPF.2.0.20525\lib\net40\Microsoft.Expression.Interactions.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.4.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\进销存管理系统\PSI\PSI.Common\bin\Debug\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Windows.Interactivity.WPF.2.0.20525\lib\net40\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="BM\HouseInfoView.xaml.cs">
+      <DependentUpon>HouseInfoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BM\HouseList.xaml.cs">
+      <DependentUpon>HouseList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BM\HouseTradeInfoWindow.xaml.cs">
+      <DependentUpon>HouseTradeInfoWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BM\OwnerList.xaml.cs">
+      <DependentUpon>OwnerList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BM\OwnInfoView.xaml.cs">
+      <DependentUpon>OwnInfoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ComUtility.cs" />
+    <Compile Include="CRM\CustomerFollowUpLogInfoWindow.xaml.cs">
+      <DependentUpon>CustomerFollowUpLogInfoWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CRM\CustomerFollowUpLogList.xaml.cs">
+      <DependentUpon>CustomerFollowUpLogList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CRM\CustomerInfoView.xaml.cs">
+      <DependentUpon>CustomerInfoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CRM\CustomerList.xaml.cs">
+      <DependentUpon>CustomerList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CRM\CustomerRequestInfoWindow.xaml.cs">
+      <DependentUpon>CustomerRequestInfoWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CRM\CustomerRequestList.xaml.cs">
+      <DependentUpon>CustomerRequestList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HSat\HouseStatisticsView.xaml.cs">
+      <DependentUpon>HouseStatisticsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HSat\HouseStatList.xaml.cs">
+      <DependentUpon>HouseStatList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HSat\SaleHouseStatisticcsView.xaml.cs">
+      <DependentUpon>SaleHouseStatisticcsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HSat\SaleTimeStatisticsView.xaml.cs">
+      <DependentUpon>SaleTimeStatisticsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HS\HouseInfo.xaml.cs">
+      <DependentUpon>HouseInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HS\HouseShowList.xaml.cs">
+      <DependentUpon>HouseShowList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BarItemModel.cs" />
+    <Compile Include="Models\HouseChartModel.cs" />
+    <Compile Include="Models\InfoModel.cs" />
+    <Compile Include="Models\PageInfoModel.cs" />
+    <Compile Include="MsgBoxWindow.xaml.cs">
+      <DependentUpon>MsgBoxWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SM\MenuInfoWindow.xaml.cs">
+      <DependentUpon>MenuInfoWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SM\MenuList.xaml.cs">
+      <DependentUpon>MenuList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SM\RightSet.xaml.cs">
+      <DependentUpon>RightSet.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SM\RoleInfoWindow.xaml.cs">
+      <DependentUpon>RoleInfoWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SM\RoleList.xaml.cs">
+      <DependentUpon>RoleList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SM\UserInfoWindow.xaml.cs">
+      <DependentUpon>UserInfoWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SM\UserList.xaml.cs">
+      <DependentUpon>UserList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\ObjectConvert.cs" />
+    <Compile Include="ViewModels\BM\HouseInfoCheck.cs" />
+    <Compile Include="ViewModels\BM\HouseInfoViewViewModel.cs" />
+    <Compile Include="ViewModels\BM\HouseListViewModel.cs" />
+    <Compile Include="ViewModels\BM\HouseTradeInfoViewModel.cs" />
+    <Compile Include="ViewModels\BM\OwnerInfoCheck.cs" />
+    <Compile Include="ViewModels\BM\OwnerInfoViewModel.cs" />
+    <Compile Include="ViewModels\BM\OwnerListViewModel.cs" />
+    <Compile Include="ViewModels\CRM\CustomerFollowUpLogInfoCheck.cs" />
+    <Compile Include="ViewModels\CRM\CustomerFollowUpLogInfoViewModel.cs" />
+    <Compile Include="ViewModels\CRM\CustomerFollowUpLogListViewModel.cs" />
+    <Compile Include="ViewModels\CRM\CustomerInfoCheck.cs" />
+    <Compile Include="ViewModels\CRM\CustomerInfoViewViewModel.cs" />
+    <Compile Include="ViewModels\CRM\CustomerListViewModel.cs" />
+    <Compile Include="ViewModels\CRM\CustomerRequestInfoViewViewModel.cs" />
+    <Compile Include="ViewModels\CRM\CustomerRequestListViewModel.cs" />
+    <Compile Include="ViewModels\CRM\CustomerRequstInfoCheck.cs" />
+    <Compile Include="ViewModels\HouseInfoViewModel.cs" />
+    <Compile Include="ViewModels\HouseListViewModel.cs" />
+    <Compile Include="ViewModels\HSat\HouseStatisticsViewViewModel.cs" />
+    <Compile Include="ViewModels\HSat\SaleHouseStatisticsViewViewModel.cs" />
+    <Compile Include="ViewModels\HSat\SaleTimeStatisticsViewViewModel.cs" />
+    <Compile Include="ViewModels\InfoViewModelBase.cs" />
+    <Compile Include="ViewModels\ListCheckModelBase.cs" />
+    <Compile Include="ViewModels\ListViewModelBase.cs" />
+    <Compile Include="ViewModels\MenuGroup.cs" />
+    <Compile Include="Models\QueryStatListModel.cs" />
+    <Compile Include="Models\RentSaleModel.cs" />
+    <Compile Include="Models\TimeModel.cs" />
+    <Compile Include="MsgBoxHelper.cs" />
+    <Compile Include="Utils\FocusBehaviorBase.cs" />
+    <Compile Include="Utils\WindowExt.cs" />
+    <Compile Include="Utils\WindowManager.cs" />
+    <Compile Include="ViewModels\LoginViewModel.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\SM\MenuInfoViewModel.cs" />
+    <Compile Include="ViewModels\SM\MenuListViewModel.cs" />
+    <Compile Include="ViewModels\SM\MInfoModel.cs" />
+    <Compile Include="ViewModels\RelayCommand.cs" />
+    <Compile Include="ViewModels\SM\RightSetViewModel.cs" />
+    <Compile Include="ViewModels\SM\RoleInfoCheck.cs" />
+    <Compile Include="ViewModels\SM\RoleInfoViewModel.cs" />
+    <Compile Include="ViewModels\SM\RoleListViewModel.cs" />
+    <Compile Include="ViewModels\ToolBarViewModel.cs" />
+    <Compile Include="ViewModels\SM\TreeMenuItem.cs" />
+    <Compile Include="ViewModels\SM\UserInfoCheck.cs" />
+    <Compile Include="ViewModels\SM\UserInfoViewModel.cs" />
+    <Compile Include="ViewModels\SM\UserListViewModel.cs" />
+    <Compile Include="ViewModels\ViewModelBase.cs" />
+    <Compile Include="Views\ListToolBarView.xaml.cs">
+      <DependentUpon>ListToolBarView.xaml</DependentUpon>
+    </Compile>
+    <Page Include="BM\HouseInfoView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BM\HouseList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BM\HouseTradeInfoWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BM\OwnerList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BM\OwnInfoView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CRM\CustomerFollowUpLogInfoWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CRM\CustomerFollowUpLogList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CRM\CustomerInfoView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CRM\CustomerList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CRM\CustomerRequestInfoWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CRM\CustomerRequestList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="HouseMain.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HouseMain.xaml.cs">
+      <DependentUpon>HouseMain.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="HSat\HouseStatisticsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="HSat\HouseStatList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="HSat\SaleHouseStatisticcsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="HSat\SaleTimeStatisticsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="HS\HouseInfo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="HS\HouseShowList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="LoginWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MsgBoxWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="res\houseListResource.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="res\loginResource.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="res\mainResource.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SM\MenuInfoWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SM\MenuList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SM\RightSet.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SM\RoleInfoWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SM\RoleList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SM\UserInfoWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SM\UserList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ListToolBarView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LoginWindow.xaml.cs">
+      <DependentUpon>LoginWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="imgs\house\house120200902030954.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgs\house\house220200902110906.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgs\house\house320200902020958.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgs\house\house32020090202095820200917090909.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgs\logo.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="imgs\house.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HRSM.BLL\HRSM.BLL.csproj">
+      <Project>{3B3982B9-DB21-4E29-B4C0-6A5BC01C3818}</Project>
+      <Name>HRSM.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HRSM.Common\HRSM.Common.csproj">
+      <Project>{EC6D8F8B-2ABF-44E2-93C9-88A61B8314C5}</Project>
+      <Name>HRSM.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HRSM.Models\HRSM.Models.csproj">
+      <Project>{8C182CB1-BDD9-4B70-8924-7DFF80541A4A}</Project>
+      <Name>HRSM.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="imgs\login_bg.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="imgs\btn_login_bg.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="imgs\error.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="imgs\question.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="imgs\success.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="imgs\errbtn.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="imgs\house\house.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgs\house\house220200602110600.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgs\house\house320200602010601.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

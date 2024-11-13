@@ -1,0 +1,241 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts"
+    xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:vm="clr-namespace:HRSM.DXHouseApp.ViewModels.HSat"
+        x:Class="HRSM.DXHouseApp.HSat.HouseStatisticsView"
+             mc:Ignorable="d"
+             d:DesignHeight="300" d:DesignWidth="1000" Loaded="UserControl_Loaded">
+        <UserControl.DataContext>
+                <vm:HouseStatisticsViewViewModel/>
+        </UserControl.DataContext>
+        <UserControl.Resources>
+                <Style TargetType="{x:Type TextBlock}" x:Key="tbBaseStyle">
+                        <Setter Property="FontSize" Value="12"/>
+                        <Setter Property="FontWeight" Value="Bold"/>
+                </Style>
+                <Style TargetType="{x:Type TextBlock}" x:Key="colNameStyle" BasedOn="{StaticResource tbBaseStyle}">
+                        <Setter Property="Foreground" Value="NavajoWhite"/>
+                        <Setter Property="FontSize" Value="13"/>
+                        <Setter Property="Margin" Value="10,0"/>
+                </Style>
+                <Style TargetType="{x:Type dxg:GridColumn}" >
+                        <Setter Property="HeaderTemplate">
+                                <Setter.Value>
+                                        <DataTemplate>
+                                                <TextBlock Text="{Binding}" Style="{StaticResource colNameStyle}" />
+                                        </DataTemplate>
+                                </Setter.Value>
+                        </Setter>
+                </Style>
+
+                <Style TargetType="{x:Type TextBlock}" x:Key="bandHeader" BasedOn="{StaticResource tbBaseStyle}">
+                        <Setter Property="Foreground" Value="OrangeRed"/>
+                        <Setter Property="FontSize" Value="14"/>
+                        <Setter Property="Margin" Value="5,0"/>
+                </Style>
+                <Style TargetType="{x:Type TextBlock}" x:Key="bandCountStyle" BasedOn="{StaticResource tbBaseStyle}">
+                        <Setter Property="Foreground" Value="YellowGreen"/>
+                </Style>
+                <Style TargetType="{x:Type TextBlock}" x:Key="cellStyle" >
+                        <Setter Property="Margin" Value="10,5"/>
+                        <Setter Property="FontWeight" Value="Bold"/>
+                </Style>
+                <Style TargetType="{x:Type TextBlock}" x:Key="publishCountStyle" BasedOn="{StaticResource cellStyle}">
+                        <Setter Property="Foreground" Value="DarkOliveGreen"/>
+                </Style>
+
+                <Style TargetType="{x:Type TextBlock}" x:Key="unPublishCountStyle" BasedOn="{StaticResource cellStyle}">
+                        <Setter Property="Foreground" Value="Red"/>
+                </Style>
+
+                <Style TargetType="{x:Type TextBlock}" x:Key="rentCountStyle" BasedOn="{StaticResource cellStyle}">
+                        <Setter Property="Foreground" Value="#FFD12BA3"/>
+                </Style>
+
+                <Style TargetType="{x:Type TextBlock}" x:Key="unRentCountStyle" BasedOn="{StaticResource cellStyle}">
+                        <Setter Property="Foreground" Value="#FF82686B"/>
+                </Style>
+
+                <Style TargetType="{x:Type TextBlock}" x:Key="saleCountStyle" BasedOn="{StaticResource cellStyle}">
+                        <Setter Property="Foreground" Value="#FF1A39E4"/>
+                </Style>
+
+                <Style TargetType="{x:Type TextBlock}" x:Key="unSaleCountStyle" BasedOn="{StaticResource cellStyle}">
+                        <Setter Property="Foreground" Value="#FF453A4B"/>
+                </Style>
+                <DataTemplate x:Key="bandRentTotal">
+                        <StackPanel  Margin="20,5" Orientation="Horizontal" HorizontalAlignment="Stretch">
+                                <TextBlock Text="出租"  Style="{StaticResource bandHeader}"/>
+                                <TextBlock Text="{Binding DataContext.TRentCount,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type UserControl}}}" TextAlignment="Center" Style="{StaticResource  bandCountStyle}"/>
+                        </StackPanel>
+                </DataTemplate>
+                <DataTemplate x:Key="bandHouseTotal">
+                        <StackPanel  Margin="20,5" Orientation="Horizontal">
+                                <TextBlock Text="房屋总计"  Style="{StaticResource bandHeader}"/>
+                                <TextBlock Text="{Binding DataContext.TotalCount,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type UserControl}}}" TextAlignment="Center" Style="{StaticResource  bandCountStyle}"/>
+                        </StackPanel>
+                </DataTemplate>
+
+                <DataTemplate x:Key="bandSaleTotal" >
+                        <StackPanel  Margin="20,5" Orientation="Horizontal">
+                                <TextBlock Text="出售"  Style="{StaticResource bandHeader}"/>
+                                <TextBlock Text="{Binding DataContext.TSaleCount,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type UserControl}}}" TextAlignment="Center" Style="{StaticResource  bandCountStyle}"/>
+                        </StackPanel>
+                </DataTemplate>
+        </UserControl.Resources>
+        <Grid>
+                <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                        <ColumnDefinition Width="3*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition Height="30"></RowDefinition>
+                </Grid.RowDefinitions>
+                <dxg:GridControl x:Name="gridHouseData" Grid.Column="0" Grid.Row="0" EnableSmartColumnsGeneration="False" HorizontalAlignment="Stretch"   AutoGenerateColumns="KeepOld"  SelectionMode="None" VerticalAlignment="Stretch"  ItemsSource="{Binding HouseStatData}" >
+                        <dxg:GridControl.View>
+                                <dxg:TableView Name="tvList" AllowPerPixelScrolling="True" ShowTotalSummary="True" AllowEditing="False"  ShowGroupPanel="False" 
+                   AutoWidth="True" ShowFixedTotalSummary="False" FixedLineHeight="10" MouseDown="TvList_MouseDown"  />
+                        </dxg:GridControl.View>
+                        <dxg:GridControl.Bands>
+                                <dxg:GridControlBand  HeaderTemplate="{StaticResource bandHouseTotal}" >
+                                        <dxg:GridColumn FieldName="PublishedCount" Header="已发布" >
+                                                <dxg:GridColumn.CellTemplate>
+                                                        <DataTemplate>
+                                                                <TextBlock Text="{Binding Path=Value}" Style="{StaticResource publishCountStyle}" >
+                                                                </TextBlock>
+                                                        </DataTemplate>
+                                                </dxg:GridColumn.CellTemplate>
+                                        </dxg:GridColumn>
+                                        <dxg:GridColumn FieldName="UnPublishedCount" Header="未发布">
+                                                <dxg:GridColumn.CellTemplate>
+                                                        <DataTemplate>
+                                                                <TextBlock Text="{Binding Path=Value}" Style="{StaticResource unPublishCountStyle}" ></TextBlock>
+                                                        </DataTemplate>
+                                                </dxg:GridColumn.CellTemplate>
+                                        </dxg:GridColumn>
+                                </dxg:GridControlBand>
+                                <dxg:GridControlBand  HeaderTemplate="{StaticResource bandRentTotal}">
+                                        <dxg:GridColumn FieldName="HasRentCount" Header="已出租">
+                                                <dxg:GridColumn.CellTemplate>
+                                                        <DataTemplate>
+                                                                <TextBlock Text="{Binding Path=Value}" Style="{StaticResource rentCountStyle}" ></TextBlock>
+                                                        </DataTemplate>
+                                                </dxg:GridColumn.CellTemplate>
+                                        </dxg:GridColumn>
+                                        <dxg:GridColumn FieldName="UnRentCount" Header="未出租" >
+                                                <dxg:GridColumn.CellTemplate>
+                                                        <DataTemplate>
+                                                                <TextBlock Text="{Binding Path=Value}" Style="{StaticResource unRentCountStyle}"></TextBlock>
+                                                        </DataTemplate>
+                                                </dxg:GridColumn.CellTemplate>
+                                        </dxg:GridColumn>
+
+                                </dxg:GridControlBand>
+                                <dxg:GridControlBand HeaderTemplate="{StaticResource bandSaleTotal}">
+                                        <dxg:GridColumn FieldName="HasSaleCount" Header="已出售" >
+                                                <dxg:GridColumn.CellTemplate>
+                                                        <DataTemplate>
+                                                                <TextBlock Text="{Binding Path=Value}" Style="{StaticResource saleCountStyle}" ></TextBlock>
+                                                        </DataTemplate>
+                                                </dxg:GridColumn.CellTemplate>
+                                        </dxg:GridColumn>
+                                        <dxg:GridColumn FieldName="UnSaleCount" Header="未出售数">
+                                                <dxg:GridColumn.CellTemplate>
+                                                        <DataTemplate>
+                                                                <TextBlock Text="{Binding Path=Value}" Style="{StaticResource unSaleCountStyle}" ></TextBlock>
+                                                        </DataTemplate>
+                                                </dxg:GridColumn.CellTemplate>
+                                        </dxg:GridColumn>
+                                </dxg:GridControlBand>
+                        </dxg:GridControl.Bands>
+                </dxg:GridControl>
+
+                <dxc:ChartControl Grid.Column="1" Grid.Row="0" Name="chartHouses" RenderTransformOrigin="0.5,0.5"  HorizontalAlignment="Stretch"  >
+                        <dxc:ChartControl.Diagram>
+                                <dxc:XYDiagram2D   FlowDirection="LeftToRight" >
+                                        <dxc:XYDiagram2D.Series  >
+                                                <!--表示二维并排条形图系列。-->
+                                                <dxc:BarSideBySideSeries2D Name="totalSeries" DisplayName="总量" BarWidth="0.5"  DataSource="{Binding TotalList}" ArgumentDataMember="XName" ValueDataMember="HCount">
+                                                        <!--region #Model-->
+                                                        <dxc:BarSideBySideSeries2D.Model>
+                                                                <dxc:Quasi3DBar2DModel  />
+                                                        </dxc:BarSideBySideSeries2D.Model>
+                                                        <!--endregion #Model-->
+                                                </dxc:BarSideBySideSeries2D>
+                                                <dxc:BarSideBySideSeries2D Name="pubSeries" DisplayName="已发布" BarWidth="0.5" DataSource="{Binding PubList}" ArgumentDataMember="XName" ValueDataMember="HCount">
+                                                        <dxc:BarSideBySideSeries2D.RenderTransform>
+                                                                <TransformGroup>
+                                                                        <RotateTransform x:Name="pubSeriesAngle" Angle="0" />
+                                                                </TransformGroup>
+                                                        </dxc:BarSideBySideSeries2D.RenderTransform>
+                                                        <!--region #Model-->
+                                                        <dxc:BarSideBySideSeries2D.Model>
+                                                                <dxc:Quasi3DBar2DModel />
+                                                        </dxc:BarSideBySideSeries2D.Model>
+                                                        <!--endregion #Model-->
+                                                </dxc:BarSideBySideSeries2D>
+                                                <dxc:BarSideBySideSeries2D Name="unPubSeries" DisplayName="未发布" BarWidth="0.5" DataSource="{Binding UnpubList}" ArgumentDataMember="XName" ValueDataMember="HCount">
+                                                        <!--region #Model-->
+                                                        <dxc:BarSideBySideSeries2D.Model>
+                                                                <dxc:Quasi3DBar2DModel />
+                                                        </dxc:BarSideBySideSeries2D.Model>
+
+                                                        <!--endregion #Model-->
+                                                </dxc:BarSideBySideSeries2D>
+                                                <dxc:BarSideBySideSeries2D Name="hasRSSeries" DisplayName="已租售" BarWidth="0.5" DataSource="{Binding HasRentSale}" ArgumentDataMember="XName" ValueDataMember="HCount">
+                                                        <!--region #Model-->
+                                                        <dxc:BarSideBySideSeries2D.Model>
+                                                                <dxc:Quasi3DBar2DModel />
+                                                        </dxc:BarSideBySideSeries2D.Model>
+                                                        <!--endregion #Model-->
+                                                </dxc:BarSideBySideSeries2D>
+                                                <dxc:BarSideBySideSeries2D Name="unRSSeries" DisplayName="未租售" BarWidth="0.5" DataSource="{Binding UnhasRentSale}" ArgumentDataMember="XName" ValueDataMember="HCount">
+                                                        <!--region #Model-->
+                                                        <dxc:BarSideBySideSeries2D.Model>
+                                                                <dxc:Quasi3DBar2DModel />
+                                                        </dxc:BarSideBySideSeries2D.Model>
+                                                        <!--endregion #Model-->
+                                                </dxc:BarSideBySideSeries2D>
+                                        </dxc:XYDiagram2D.Series>
+                                </dxc:XYDiagram2D>
+                        </dxc:ChartControl.Diagram>
+                        <dxc:ChartControl.Triggers>
+                                <EventTrigger RoutedEvent="dxc:ChartControl.Loaded">
+                                        <EventTrigger.Actions>
+                                                <BeginStoryboard>
+                                                        <Storyboard Name="st">
+                                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetName="pubSeriesAngle" Storyboard.TargetProperty="Angle">
+                                                                        <LinearDoubleKeyFrame KeyTime="0:0:5"  Value="90"/>
+                                                                </DoubleAnimationUsingKeyFrames>
+                                                        </Storyboard>
+                                                </BeginStoryboard>
+                                        </EventTrigger.Actions>
+                                </EventTrigger>
+                        </dxc:ChartControl.Triggers>
+                        <dxc:ChartControl.Legend>
+                                <dxc:Legend Orientation="Vertical" HorizontalPosition="LeftOutside" FontSize="12"
+                    VerticalPosition="Top"    >
+                                        <dxc:Legend.Title>
+                                                <dxc:LegendTitle Content="房屋数量统计" FontSize="16" />
+                                        </dxc:Legend.Title>
+                                </dxc:Legend>
+                        </dxc:ChartControl.Legend>
+                        <dxc:ChartControl.RenderTransform>
+                                <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform x:Name="chartAngle" Angle="0"/>
+                                        <TranslateTransform/>
+                                </TransformGroup>
+                        </dxc:ChartControl.RenderTransform>
+                </dxc:ChartControl>
+                <dx:SimpleButton Name="btnOut" Grid.Row="1" Content="导出" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="20,2" Command="{Binding ExportDataCmd}" CommandParameter="{Binding ElementName=gridHouseData,Path=Columns}" ></dx:SimpleButton>
+        </Grid>
+</UserControl>

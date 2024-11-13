@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31025.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRSM.DXHouseApp", "HRSM.DXHouseApp\HRSM.DXHouseApp.csproj", "{22BE8B4E-1AA6-4CC4-8790-9DD81DDD0113}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBUtility", "DBUtility\DBUtility.csproj", "{2E43B7C4-0F45-4948-AC0A-6FCE936A7B77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRSM.Models", "HRSM.Models\HRSM.Models.csproj", "{8C182CB1-BDD9-4B70-8924-7DFF80541A4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRSM.Common", "HRSM.Common\HRSM.Common.csproj", "{EC6D8F8B-2ABF-44E2-93C9-88A61B8314C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRSM.DAL", "HRSM.DAL\HRSM.DAL.csproj", "{07612D88-49ED-4CD7-AE2B-EB8908A1F76A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRSM.BLL", "HRSM.BLL\HRSM.BLL.csproj", "{3B3982B9-DB21-4E29-B4C0-6A5BC01C3818}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{22BE8B4E-1AA6-4CC4-8790-9DD81DDD0113}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22BE8B4E-1AA6-4CC4-8790-9DD81DDD0113}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22BE8B4E-1AA6-4CC4-8790-9DD81DDD0113}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22BE8B4E-1AA6-4CC4-8790-9DD81DDD0113}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E43B7C4-0F45-4948-AC0A-6FCE936A7B77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E43B7C4-0F45-4948-AC0A-6FCE936A7B77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E43B7C4-0F45-4948-AC0A-6FCE936A7B77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E43B7C4-0F45-4948-AC0A-6FCE936A7B77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C182CB1-BDD9-4B70-8924-7DFF80541A4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C182CB1-BDD9-4B70-8924-7DFF80541A4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C182CB1-BDD9-4B70-8924-7DFF80541A4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C182CB1-BDD9-4B70-8924-7DFF80541A4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC6D8F8B-2ABF-44E2-93C9-88A61B8314C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC6D8F8B-2ABF-44E2-93C9-88A61B8314C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC6D8F8B-2ABF-44E2-93C9-88A61B8314C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC6D8F8B-2ABF-44E2-93C9-88A61B8314C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07612D88-49ED-4CD7-AE2B-EB8908A1F76A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07612D88-49ED-4CD7-AE2B-EB8908A1F76A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07612D88-49ED-4CD7-AE2B-EB8908A1F76A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07612D88-49ED-4CD7-AE2B-EB8908A1F76A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B3982B9-DB21-4E29-B4C0-6A5BC01C3818}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B3982B9-DB21-4E29-B4C0-6A5BC01C3818}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B3982B9-DB21-4E29-B4C0-6A5BC01C3818}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B3982B9-DB21-4E29-B4C0-6A5BC01C3818}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B8F9DA6A-1F55-42CB-822A-D0A9B6A84F51}
+	EndGlobalSection
+EndGlobal

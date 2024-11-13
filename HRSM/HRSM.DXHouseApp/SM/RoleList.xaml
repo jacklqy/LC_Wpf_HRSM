@@ -1,0 +1,133 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+             xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+             xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+             xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:Views="clr-namespace:HRSM.DXHouseApp.Views" 
+            xmlns:vm="clr-namespace:HRSM.DXHouseApp.ViewModels.SM"
+            xmlns:util="clr-namespace:HRSM.DXHouseApp.Utils"
+             x:Class="HRSM.DXHouseApp.SM.RoleList"
+             mc:Ignorable="d" x:Name="ucRoleList"
+             d:DesignHeight="500" d:DesignWidth="800" Loaded="UcRoleList_Loaded">
+        <UserControl.Resources>
+                <util:ObjectConvert x:Key="objConverter"/>
+        </UserControl.Resources>
+        <UserControl.DataContext>
+                <vm:RoleListViewModel/>
+        </UserControl.DataContext>
+        <Grid>
+                <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Views:ListToolBarView x:Name="tbar" HorizontalAlignment="Stretch"  Grid.Row="0" VerticalAlignment="Stretch"   DataContext="{Binding ToolBarInfo}"/>
+                <dxe:CheckEdit Name="chkShowDel" Grid.Row="1" IsChecked="{Binding IsShowDel,UpdateSourceTrigger=PropertyChanged}" Command="{Binding FindRoleListCmd}"  VerticalAlignment="Center" HorizontalAlignment="Right"  Content="显示已删除" Foreground="Red" Margin="0,5,30,0" />
+
+                <dxg:GridControl Name="gridRoles" Grid.Row="2" EnableSmartColumnsGeneration="False" HorizontalAlignment="Stretch"   AutoGenerateColumns="KeepOld"  SelectionMode="MultipleRow" VerticalAlignment="Stretch" ItemsSource="{Binding RoleList}"  CurrentItem="{Binding CurrentItem}">
+                        <dxg:GridControl.View>
+                                <dxg:TableView AllowPerPixelScrolling="True" ShowTotalSummary="False"  AllowEditing="False"  ShowGroupPanel="False"    AutoWidth="True" />
+                        </dxg:GridControl.View>
+                        <dxg:GridColumn HorizontalHeaderContentAlignment="Center" Width="50" FieldName="IsCheck">
+                                <dxg:GridColumn.HeaderTemplate>
+                                        <DataTemplate>
+                                                <dxe:CheckEdit x:Name="chkAll" Content="全选" IsChecked="{Binding DataContext.IsCheckAll,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type UserControl}}}" Command="{Binding DataContext.CheckAllCmd,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type UserControl}}}"/>
+                                        </DataTemplate>
+                                </dxg:GridColumn.HeaderTemplate>
+                                <dxg:GridColumn.CellTemplate>
+                                        <DataTemplate>
+                                                <dxe:CheckEdit Name="chk" IsChecked="{Binding Path=Value,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Center"  Command="{Binding DataContext.CheckItemCmd,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type UserControl}}}"  CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self},Path=DataContext.RowData.Row}">
+                                                       
+                                                </dxe:CheckEdit>
+                                        </DataTemplate>
+                                </dxg:GridColumn.CellTemplate>
+                        </dxg:GridColumn>
+                        <dxg:GridColumn FieldName="RoleInfo.RoleId" Header="角色编号" AllowEditing="False"  />
+                        <dxg:GridColumn FieldName="RoleInfo.RoleName" Header="角色名称"  AllowEditing="False" >
+                                <dxg:GridColumn.CellTemplate>
+                                        <DataTemplate>
+                                                <Label  Content="{Binding Value}"/>
+                                        </DataTemplate>
+                                </dxg:GridColumn.CellTemplate>
+                        </dxg:GridColumn>
+                        <dxg:GridColumn Name="colAdmin" FieldName="RoleInfo.IsAdmin" Header="管理员" Width="50" >
+                                <dxg:GridColumn.CellTemplate>
+                                        <DataTemplate>
+                                                <dxe:CheckEdit  IsChecked="{Binding Value}" IsEnabled="False" Margin="10,0" />
+                                        </DataTemplate>
+                                </dxg:GridColumn.CellTemplate>
+                        </dxg:GridColumn>
+                        <dxg:GridColumn FieldName="RoleInfo.Remark" Header="角色描述" Width="150"  AllowEditing="False" />
+
+                        <dxg:GridColumn  Header="修改" FieldName="RoleInfo.RoleId" Width="50" Name="colEdit"  HorizontalHeaderContentAlignment="Center" Visible="{Binding IsEdited}">
+                                <dxg:GridColumn.CellTemplate>
+                                        <DataTemplate>
+                                                <dxe:ImageEdit x:Name="imgEdit" Source="{dx:DXImage Image=Edit_16x16.png}" Stretch="Fill" Width="16" Height="16" ShowMenu="False"  >
+                                                        <i:Interaction.Triggers>
+                                                                <i:EventTrigger EventName="MouseLeftButtonDown">
+                                                                        <i:InvokeCommandAction Command="{Binding DataContext.EditRoleCmd,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type UserControl}}}" CommandParameter="{Binding Path=Value}"/>
+                                                                </i:EventTrigger>
+                                                        </i:Interaction.Triggers>
+                                                </dxe:ImageEdit>
+                                        </DataTemplate>
+                                </dxg:GridColumn.CellTemplate>
+                        </dxg:GridColumn>
+                        <dxg:GridColumn Name="colDel"  Header="删除" FieldName="RoleInfo.RoleId" Width="60"  HorizontalHeaderContentAlignment="Center" Visible="{Binding IsEdited}">
+                                <dxg:GridColumn.CellTemplate>
+                                        <DataTemplate>
+                                                <dxe:ImageEdit x:Name="imgDel" Source="{dx:DXImage Image=Delete_16x16.png}" Stretch="Fill" Width="16" Height="16" ShowMenu="False" Tag="{Binding Path=Value}" >
+                                                        <i:Interaction.Triggers>
+                                                                <i:EventTrigger EventName="MouseLeftButtonDown">
+                                                                        <i:InvokeCommandAction Command="{Binding DataContext.DelRoleCmd,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type UserControl}}}" CommandParameter="{Binding Path=Value}"/>
+                                                                </i:EventTrigger>
+                                                        </i:Interaction.Triggers>
+                                                </dxe:ImageEdit>
+                                        </DataTemplate>
+                                </dxg:GridColumn.CellTemplate>
+                        </dxg:GridColumn>
+                        <dxg:GridColumn Name="colRecover"  Header="恢复" FieldName="RoleInfo.RoleId" Width="50"  HorizontalHeaderContentAlignment="Center" Visible="{Binding IsShowDel}">
+                                <dxg:GridColumn.CellTemplate>
+                                        <DataTemplate>
+                                                <dxe:ImageEdit x:Name="imgRecover" Source="{dx:DXImage Image=Reset2_16x16.png}" Stretch="Fill" Width="16" Height="16" ShowMenu="False" Tag="{Binding Path=Value}" >
+                                                        <i:Interaction.Triggers>
+                                                                <i:EventTrigger EventName="MouseLeftButtonDown">
+                                                                        <i:InvokeCommandAction Command="{Binding DataContext.RecoverRoleCmd,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type UserControl}}}" CommandParameter="{Binding Path=Value}"/>
+                                                                </i:EventTrigger>
+                                                        </i:Interaction.Triggers>
+                                                </dxe:ImageEdit>
+                                        </DataTemplate>
+                                </dxg:GridColumn.CellTemplate>
+                        </dxg:GridColumn>
+                        <dxg:GridColumn Name="colRemove"  Header="移除" FieldName="RoleInfo." Width="50"  HorizontalHeaderContentAlignment="Center" Visible="{Binding IsShowDel}">
+                                <dxg:GridColumn.CellTemplate>
+                                        <DataTemplate>
+                                                <dxe:ImageEdit x:Name="imgRemove" Source="{dx:DXImage Image=Remove_16x16.png}" Stretch="Fill" Width="16" Height="16" ShowMenu="False" Tag="{Binding Path=Value}" >
+                                                        <i:Interaction.Triggers>
+                                                                <i:EventTrigger EventName="MouseLeftButtonDown">
+                                                                        <i:InvokeCommandAction Command="{Binding DataContext.RemoveRoleCmd,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type UserControl}}}" CommandParameter="{Binding Path=Value}"/>
+                                                                </i:EventTrigger>
+                                                        </i:Interaction.Triggers>
+                                                </dxe:ImageEdit>
+                                        </DataTemplate>
+                                </dxg:GridColumn.CellTemplate>
+                        </dxg:GridColumn>
+                </dxg:GridControl>
+
+
+
+
+
+
+
+
+
+
+
+        </Grid>
+</UserControl>

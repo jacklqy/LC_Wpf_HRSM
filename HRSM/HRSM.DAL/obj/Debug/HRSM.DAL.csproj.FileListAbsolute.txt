@@ -1,0 +1,134 @@
+D:\课程新内容\项目实战\房屋租售管理平台\HRSM\HRSM.DAL\bin\Debug\HRSM.DAL.dll
+D:\课程新内容\项目实战\房屋租售管理平台\HRSM\HRSM.DAL\bin\Debug\HRSM.DAL.pdb
+D:\课程新内容\项目实战\房屋租售管理平台\HRSM\HRSM.DAL\bin\Debug\DBUtility.dll
+D:\课程新内容\项目实战\房屋租售管理平台\HRSM\HRSM.DAL\bin\Debug\HRSM.Common.dll
+D:\课程新内容\项目实战\房屋租售管理平台\HRSM\HRSM.DAL\bin\Debug\HRSM.Models.dll
+D:\课程新内容\项目实战\房屋租售管理平台\HRSM\HRSM.DAL\bin\Debug\NPOI.dll
+D:\课程新内容\项目实战\房屋租售管理平台\HRSM\HRSM.DAL\bin\Debug\Newtonsoft.Json.dll
+D:\课程新内容\项目实战\房屋租售管理平台\HRSM\HRSM.DAL\bin\Debug\NPOI.OOXML.dll
+D:\课程新内容\项目实战\房屋租售管理平台\HRSM\HRSM.DAL\bin\Debug\NPinyinPro.dll
+D:\课程新内容\项目实战\房屋租售管理平台\HRSM\HRSM.DAL\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\课程新内容\项目实战\房屋租售管理平台\HRSM\HRSM.DAL\bin\Debug\NPOI.OpenXml4Net.dll
+D:\课程新内容\项目实战\房屋租售管理平台\HRSM\HRSM.DAL\bin\Debug\NPOI.OpenXmlFormats.dll
+D:\课程新内容\项目实战\房屋租售管理平台\HRSM\HRSM.DAL\bin\Debug\DBUtility.pdb
+D:\课程新内容\项目实战\房屋租售管理平台\HRSM\HRSM.DAL\bin\Debug\HRSM.Common.pdb
+D:\课程新内容\项目实战\房屋租售管理平台\HRSM\HRSM.DAL\bin\Debug\HRSM.Models.pdb
+D:\课程新内容\项目实战\房屋租售管理平台\HRSM\HRSM.DAL\bin\Debug\Newtonsoft.Json.pdb
+D:\课程新内容\项目实战\房屋租售管理平台\HRSM\HRSM.DAL\bin\Debug\Newtonsoft.Json.xml
+D:\课程新内容\项目实战\房屋租售管理平台\HRSM\HRSM.DAL\bin\Debug\ICSharpCode.SharpZipLib.xml
+D:\课程新内容\项目实战\房屋租售管理平台\HRSM\HRSM.DAL\obj\Debug\HRSM.DAL.csprojAssemblyReference.cache
+D:\课程新内容\项目实战\房屋租售管理平台\HRSM\HRSM.DAL\obj\Debug\HRSM.DAL.csproj.CoreCompileInputs.cache
+D:\课程新内容\项目实战\房屋租售管理平台\HRSM\HRSM.DAL\obj\Debug\HRSM.DAL.csproj.CopyComplete
+D:\课程新内容\项目实战\房屋租售管理平台\HRSM\HRSM.DAL\obj\Debug\HRSM.DAL.dll
+D:\课程新内容\项目实战\房屋租售管理平台\HRSM\HRSM.DAL\obj\Debug\HRSM.DAL.pdb
+D:\工作\课程安排\WPF实战项目\HRSM\HRSM.DAL\bin\Debug\HRSM.DAL.dll
+D:\工作\课程安排\WPF实战项目\HRSM\HRSM.DAL\bin\Debug\HRSM.DAL.pdb
+D:\工作\课程安排\WPF实战项目\HRSM\HRSM.DAL\bin\Debug\DBUtility.dll
+D:\工作\课程安排\WPF实战项目\HRSM\HRSM.DAL\bin\Debug\HRSM.Common.dll
+D:\工作\课程安排\WPF实战项目\HRSM\HRSM.DAL\bin\Debug\HRSM.Models.dll
+D:\工作\课程安排\WPF实战项目\HRSM\HRSM.DAL\bin\Debug\NPOI.dll
+D:\工作\课程安排\WPF实战项目\HRSM\HRSM.DAL\bin\Debug\Newtonsoft.Json.dll
+D:\工作\课程安排\WPF实战项目\HRSM\HRSM.DAL\bin\Debug\NPOI.OOXML.dll
+D:\工作\课程安排\WPF实战项目\HRSM\HRSM.DAL\bin\Debug\NPinyinPro.dll
+D:\工作\课程安排\WPF实战项目\HRSM\HRSM.DAL\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\工作\课程安排\WPF实战项目\HRSM\HRSM.DAL\bin\Debug\NPOI.OpenXml4Net.dll
+D:\工作\课程安排\WPF实战项目\HRSM\HRSM.DAL\bin\Debug\NPOI.OpenXmlFormats.dll
+D:\工作\课程安排\WPF实战项目\HRSM\HRSM.DAL\bin\Debug\DBUtility.pdb
+D:\工作\课程安排\WPF实战项目\HRSM\HRSM.DAL\bin\Debug\HRSM.Common.pdb
+D:\工作\课程安排\WPF实战项目\HRSM\HRSM.DAL\bin\Debug\HRSM.Models.pdb
+D:\工作\课程安排\WPF实战项目\HRSM\HRSM.DAL\bin\Debug\Newtonsoft.Json.pdb
+D:\工作\课程安排\WPF实战项目\HRSM\HRSM.DAL\bin\Debug\Newtonsoft.Json.xml
+D:\工作\课程安排\WPF实战项目\HRSM\HRSM.DAL\bin\Debug\ICSharpCode.SharpZipLib.xml
+D:\工作\课程安排\WPF实战项目\HRSM\HRSM.DAL\obj\Debug\HRSM.DAL.csprojAssemblyReference.cache
+D:\工作\课程安排\WPF实战项目\HRSM\HRSM.DAL\obj\Debug\HRSM.DAL.csproj.CoreCompileInputs.cache
+D:\工作\课程安排\WPF实战项目\HRSM\HRSM.DAL\obj\Debug\HRSM.DAL.csproj.CopyComplete
+D:\工作\课程安排\WPF实战项目\HRSM\HRSM.DAL\obj\Debug\HRSM.DAL.dll
+D:\工作\课程安排\WPF实战项目\HRSM\HRSM.DAL\obj\Debug\HRSM.DAL.pdb
+C:\HRSM\HRSM.DAL\bin\Debug\HRSM.DAL.dll
+C:\HRSM\HRSM.DAL\bin\Debug\HRSM.DAL.pdb
+C:\HRSM\HRSM.DAL\bin\Debug\DBUtility.dll
+C:\HRSM\HRSM.DAL\bin\Debug\HRSM.Common.dll
+C:\HRSM\HRSM.DAL\bin\Debug\HRSM.Models.dll
+C:\HRSM\HRSM.DAL\bin\Debug\NPOI.dll
+C:\HRSM\HRSM.DAL\bin\Debug\Newtonsoft.Json.dll
+C:\HRSM\HRSM.DAL\bin\Debug\NPOI.OOXML.dll
+C:\HRSM\HRSM.DAL\bin\Debug\NPinyinPro.dll
+C:\HRSM\HRSM.DAL\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\HRSM\HRSM.DAL\bin\Debug\NPOI.OpenXml4Net.dll
+C:\HRSM\HRSM.DAL\bin\Debug\NPOI.OpenXmlFormats.dll
+C:\HRSM\HRSM.DAL\bin\Debug\DBUtility.pdb
+C:\HRSM\HRSM.DAL\bin\Debug\HRSM.Common.pdb
+C:\HRSM\HRSM.DAL\bin\Debug\HRSM.Models.pdb
+C:\HRSM\HRSM.DAL\bin\Debug\Newtonsoft.Json.pdb
+C:\HRSM\HRSM.DAL\bin\Debug\Newtonsoft.Json.xml
+C:\HRSM\HRSM.DAL\obj\Debug\HRSM.DAL.csprojAssemblyReference.cache
+C:\HRSM\HRSM.DAL\obj\Debug\HRSM.DAL.csproj.CoreCompileInputs.cache
+C:\HRSM\HRSM.DAL\obj\Debug\HRSM.DAL.csproj.CopyComplete
+C:\HRSM\HRSM.DAL\obj\Debug\HRSM.DAL.dll
+C:\HRSM\HRSM.DAL\obj\Debug\HRSM.DAL.pdb
+D:\工作\BS+CS Vip第二期直播\20210507Course67WPF实战01\HRSM\HRSM.DAL\bin\Debug\HRSM.DAL.dll
+D:\工作\BS+CS Vip第二期直播\20210507Course67WPF实战01\HRSM\HRSM.DAL\bin\Debug\HRSM.DAL.pdb
+D:\工作\BS+CS Vip第二期直播\20210507Course67WPF实战01\HRSM\HRSM.DAL\bin\Debug\DBUtility.dll
+D:\工作\BS+CS Vip第二期直播\20210507Course67WPF实战01\HRSM\HRSM.DAL\bin\Debug\HRSM.Common.dll
+D:\工作\BS+CS Vip第二期直播\20210507Course67WPF实战01\HRSM\HRSM.DAL\bin\Debug\HRSM.Models.dll
+D:\工作\BS+CS Vip第二期直播\20210507Course67WPF实战01\HRSM\HRSM.DAL\bin\Debug\NPOI.dll
+D:\工作\BS+CS Vip第二期直播\20210507Course67WPF实战01\HRSM\HRSM.DAL\bin\Debug\Newtonsoft.Json.dll
+D:\工作\BS+CS Vip第二期直播\20210507Course67WPF实战01\HRSM\HRSM.DAL\bin\Debug\NPOI.OOXML.dll
+D:\工作\BS+CS Vip第二期直播\20210507Course67WPF实战01\HRSM\HRSM.DAL\bin\Debug\NPinyinPro.dll
+D:\工作\BS+CS Vip第二期直播\20210507Course67WPF实战01\HRSM\HRSM.DAL\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\工作\BS+CS Vip第二期直播\20210507Course67WPF实战01\HRSM\HRSM.DAL\bin\Debug\NPOI.OpenXml4Net.dll
+D:\工作\BS+CS Vip第二期直播\20210507Course67WPF实战01\HRSM\HRSM.DAL\bin\Debug\NPOI.OpenXmlFormats.dll
+D:\工作\BS+CS Vip第二期直播\20210507Course67WPF实战01\HRSM\HRSM.DAL\bin\Debug\DBUtility.pdb
+D:\工作\BS+CS Vip第二期直播\20210507Course67WPF实战01\HRSM\HRSM.DAL\bin\Debug\HRSM.Common.pdb
+D:\工作\BS+CS Vip第二期直播\20210507Course67WPF实战01\HRSM\HRSM.DAL\bin\Debug\HRSM.Models.pdb
+D:\工作\BS+CS Vip第二期直播\20210507Course67WPF实战01\HRSM\HRSM.DAL\bin\Debug\Newtonsoft.Json.pdb
+D:\工作\BS+CS Vip第二期直播\20210507Course67WPF实战01\HRSM\HRSM.DAL\bin\Debug\Newtonsoft.Json.xml
+D:\工作\BS+CS Vip第二期直播\20210507Course67WPF实战01\HRSM\HRSM.DAL\obj\Debug\HRSM.DAL.csprojAssemblyReference.cache
+D:\工作\BS+CS Vip第二期直播\20210507Course67WPF实战01\HRSM\HRSM.DAL\obj\Debug\HRSM.DAL.csproj.CoreCompileInputs.cache
+D:\工作\BS+CS Vip第二期直播\20210507Course67WPF实战01\HRSM\HRSM.DAL\obj\Debug\HRSM.DAL.csproj.CopyComplete
+D:\工作\BS+CS Vip第二期直播\20210507Course67WPF实战01\HRSM\HRSM.DAL\obj\Debug\HRSM.DAL.dll
+D:\工作\BS+CS Vip第二期直播\20210507Course67WPF实战01\HRSM\HRSM.DAL\obj\Debug\HRSM.DAL.pdb
+D:\工作\BS+CS Vip第二期直播\20210513Course69WPF实战03\HRSM\HRSM.DAL\bin\Debug\HRSM.DAL.dll
+D:\工作\BS+CS Vip第二期直播\20210513Course69WPF实战03\HRSM\HRSM.DAL\bin\Debug\HRSM.DAL.pdb
+D:\工作\BS+CS Vip第二期直播\20210513Course69WPF实战03\HRSM\HRSM.DAL\bin\Debug\DBUtility.dll
+D:\工作\BS+CS Vip第二期直播\20210513Course69WPF实战03\HRSM\HRSM.DAL\bin\Debug\HRSM.Common.dll
+D:\工作\BS+CS Vip第二期直播\20210513Course69WPF实战03\HRSM\HRSM.DAL\bin\Debug\HRSM.Models.dll
+D:\工作\BS+CS Vip第二期直播\20210513Course69WPF实战03\HRSM\HRSM.DAL\bin\Debug\NPOI.dll
+D:\工作\BS+CS Vip第二期直播\20210513Course69WPF实战03\HRSM\HRSM.DAL\bin\Debug\Newtonsoft.Json.dll
+D:\工作\BS+CS Vip第二期直播\20210513Course69WPF实战03\HRSM\HRSM.DAL\bin\Debug\NPOI.OOXML.dll
+D:\工作\BS+CS Vip第二期直播\20210513Course69WPF实战03\HRSM\HRSM.DAL\bin\Debug\NPinyinPro.dll
+D:\工作\BS+CS Vip第二期直播\20210513Course69WPF实战03\HRSM\HRSM.DAL\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\工作\BS+CS Vip第二期直播\20210513Course69WPF实战03\HRSM\HRSM.DAL\bin\Debug\NPOI.OpenXml4Net.dll
+D:\工作\BS+CS Vip第二期直播\20210513Course69WPF实战03\HRSM\HRSM.DAL\bin\Debug\NPOI.OpenXmlFormats.dll
+D:\工作\BS+CS Vip第二期直播\20210513Course69WPF实战03\HRSM\HRSM.DAL\bin\Debug\DBUtility.pdb
+D:\工作\BS+CS Vip第二期直播\20210513Course69WPF实战03\HRSM\HRSM.DAL\bin\Debug\HRSM.Common.pdb
+D:\工作\BS+CS Vip第二期直播\20210513Course69WPF实战03\HRSM\HRSM.DAL\bin\Debug\HRSM.Models.pdb
+D:\工作\BS+CS Vip第二期直播\20210513Course69WPF实战03\HRSM\HRSM.DAL\bin\Debug\Newtonsoft.Json.pdb
+D:\工作\BS+CS Vip第二期直播\20210513Course69WPF实战03\HRSM\HRSM.DAL\bin\Debug\Newtonsoft.Json.xml
+D:\工作\BS+CS Vip第二期直播\20210513Course69WPF实战03\HRSM\HRSM.DAL\obj\Debug\HRSM.DAL.csprojAssemblyReference.cache
+D:\工作\BS+CS Vip第二期直播\20210513Course69WPF实战03\HRSM\HRSM.DAL\obj\Debug\HRSM.DAL.csproj.CoreCompileInputs.cache
+D:\工作\BS+CS Vip第二期直播\20210513Course69WPF实战03\HRSM\HRSM.DAL\obj\Debug\HRSM.DAL.csproj.CopyComplete
+D:\工作\BS+CS Vip第二期直播\20210513Course69WPF实战03\HRSM\HRSM.DAL\obj\Debug\HRSM.DAL.dll
+D:\工作\BS+CS Vip第二期直播\20210513Course69WPF实战03\HRSM\HRSM.DAL\obj\Debug\HRSM.DAL.pdb
+D:\工作\BS+CS Vip第二期直播\20210514Course70WPF实战04\HRSM\HRSM.DAL\bin\Debug\HRSM.DAL.dll
+D:\工作\BS+CS Vip第二期直播\20210514Course70WPF实战04\HRSM\HRSM.DAL\bin\Debug\HRSM.DAL.pdb
+D:\工作\BS+CS Vip第二期直播\20210514Course70WPF实战04\HRSM\HRSM.DAL\bin\Debug\DBUtility.dll
+D:\工作\BS+CS Vip第二期直播\20210514Course70WPF实战04\HRSM\HRSM.DAL\bin\Debug\HRSM.Common.dll
+D:\工作\BS+CS Vip第二期直播\20210514Course70WPF实战04\HRSM\HRSM.DAL\bin\Debug\HRSM.Models.dll
+D:\工作\BS+CS Vip第二期直播\20210514Course70WPF实战04\HRSM\HRSM.DAL\bin\Debug\NPOI.dll
+D:\工作\BS+CS Vip第二期直播\20210514Course70WPF实战04\HRSM\HRSM.DAL\bin\Debug\Newtonsoft.Json.dll
+D:\工作\BS+CS Vip第二期直播\20210514Course70WPF实战04\HRSM\HRSM.DAL\bin\Debug\NPOI.OOXML.dll
+D:\工作\BS+CS Vip第二期直播\20210514Course70WPF实战04\HRSM\HRSM.DAL\bin\Debug\NPinyinPro.dll
+D:\工作\BS+CS Vip第二期直播\20210514Course70WPF实战04\HRSM\HRSM.DAL\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\工作\BS+CS Vip第二期直播\20210514Course70WPF实战04\HRSM\HRSM.DAL\bin\Debug\NPOI.OpenXml4Net.dll
+D:\工作\BS+CS Vip第二期直播\20210514Course70WPF实战04\HRSM\HRSM.DAL\bin\Debug\NPOI.OpenXmlFormats.dll
+D:\工作\BS+CS Vip第二期直播\20210514Course70WPF实战04\HRSM\HRSM.DAL\bin\Debug\DBUtility.pdb
+D:\工作\BS+CS Vip第二期直播\20210514Course70WPF实战04\HRSM\HRSM.DAL\bin\Debug\HRSM.Common.pdb
+D:\工作\BS+CS Vip第二期直播\20210514Course70WPF实战04\HRSM\HRSM.DAL\bin\Debug\HRSM.Models.pdb
+D:\工作\BS+CS Vip第二期直播\20210514Course70WPF实战04\HRSM\HRSM.DAL\bin\Debug\Newtonsoft.Json.pdb
+D:\工作\BS+CS Vip第二期直播\20210514Course70WPF实战04\HRSM\HRSM.DAL\bin\Debug\Newtonsoft.Json.xml
+D:\工作\BS+CS Vip第二期直播\20210514Course70WPF实战04\HRSM\HRSM.DAL\obj\Debug\HRSM.DAL.csprojAssemblyReference.cache
+D:\工作\BS+CS Vip第二期直播\20210514Course70WPF实战04\HRSM\HRSM.DAL\obj\Debug\HRSM.DAL.csproj.CoreCompileInputs.cache
+D:\工作\BS+CS Vip第二期直播\20210514Course70WPF实战04\HRSM\HRSM.DAL\obj\Debug\HRSM.DAL.csproj.CopyComplete
+D:\工作\BS+CS Vip第二期直播\20210514Course70WPF实战04\HRSM\HRSM.DAL\obj\Debug\HRSM.DAL.dll
+D:\工作\BS+CS Vip第二期直播\20210514Course70WPF实战04\HRSM\HRSM.DAL\obj\Debug\HRSM.DAL.pdb
